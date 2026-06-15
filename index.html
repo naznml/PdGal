@@ -1,0 +1,4213 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Педагогикадағы ғалымдар | Учёные в педагогике</title>
+
+  <style>
+    :root {
+      --bg: #fff7fb;
+      --card: #ffffff;
+      --text: #241528;
+      --muted: #73556f;
+      --primary: #c2185b;
+      --primary-2: #8e24aa;
+      --soft: #fde7f1;
+      --soft-2: #f3e5f5;
+      --line: #f1c7dc;
+      --good: #2e7d32;
+      --bad: #c62828;
+      --warning: #f9a825;
+      --shadow: 0 18px 45px rgba(142, 36, 170, 0.13);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, #ffe4f1 0, transparent 32%),
+        radial-gradient(circle at top right, #f3d7ff 0, transparent 30%),
+        linear-gradient(180deg, #fff7fb 0%, #fff 45%, #fff7fb 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 24px 0 70px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 34px;
+      padding: 34px 28px;
+      background:
+        linear-gradient(135deg, rgba(194, 24, 91, 0.95), rgba(142, 36, 170, 0.92)),
+        url("data:image/svg+xml,%3Csvg width='180' height='180' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='rgba(255,255,255,.2)' stroke-width='2'%3E%3Ccircle cx='90' cy='90' r='55'/%3E%3Cpath d='M20 90h140M90 20v140'/%3E%3C/g%3E%3C/svg%3E");
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -80px;
+      bottom: -90px;
+      background: rgba(255, 255, 255, 0.17);
+      border-radius: 50%;
+    }
+
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: flex-start;
+      position: relative;
+      z-index: 2;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.17);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      font-size: 14px;
+      font-weight: 700;
+      backdrop-filter: blur(10px);
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      padding: 6px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      position: relative;
+      z-index: 3;
+    }
+
+    .lang-btn {
+      border: 0;
+      cursor: pointer;
+      padding: 9px 15px;
+      border-radius: 999px;
+      font-weight: 800;
+      color: white;
+      background: transparent;
+      transition: 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: white;
+      color: var(--primary);
+    }
+
+    .hero h1 {
+      position: relative;
+      z-index: 2;
+      margin: 26px 0 12px;
+      font-size: clamp(32px, 6vw, 62px);
+      line-height: 1.03;
+      max-width: 850px;
+      letter-spacing: -1.5px;
+    }
+
+    .hero p {
+      position: relative;
+      z-index: 2;
+      max-width: 820px;
+      margin: 0;
+      font-size: clamp(16px, 2.4vw, 20px);
+      opacity: 0.94;
+    }
+
+    .hero-actions {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 15px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .toolbar {
+      margin: 22px 0;
+      padding: 18px;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 36px rgba(194, 24, 91, 0.07);
+      backdrop-filter: blur(12px);
+    }
+
+    .search-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .search-box {
+      width: 100%;
+      border: 2px solid #f1bfd5;
+      border-radius: 18px;
+      padding: 15px 18px;
+      font-size: 16px;
+      outline: none;
+      background: white;
+      color: var(--text);
+      transition: 0.2s ease;
+    }
+
+    .search-box:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 5px rgba(194, 24, 91, 0.1);
+    }
+
+    .clear-btn {
+      border: 0;
+      cursor: pointer;
+      border-radius: 18px;
+      padding: 15px 18px;
+      font-weight: 800;
+      color: white;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+    }
+
+    .filters {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .filter-btn {
+      border: 1px solid #efbfd5;
+      cursor: pointer;
+      border-radius: 999px;
+      padding: 10px 14px;
+      background: white;
+      color: var(--muted);
+      font-weight: 750;
+      transition: 0.2s ease;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--soft);
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin: 22px 0;
+    }
+
+    .stat-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: 0 12px 30px rgba(142, 36, 170, 0.08);
+    }
+
+    .stat-num {
+      display: block;
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--primary);
+      line-height: 1;
+    }
+
+    .stat-label {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .section-title {
+      margin: 36px 0 14px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: clamp(24px, 4vw, 38px);
+      letter-spacing: -0.7px;
+    }
+
+    .section-title p {
+      margin: 7px 0 0;
+      color: var(--muted);
+      max-width: 820px;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .scientist-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 20px;
+      box-shadow: 0 16px 40px rgba(142, 36, 170, 0.08);
+      transition: 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .scientist-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 7px;
+      background: linear-gradient(90deg, var(--primary), var(--primary-2));
+    }
+
+    .scientist-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 48px rgba(142, 36, 170, 0.15);
+    }
+
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: flex-start;
+      margin-top: 6px;
+    }
+
+    .scientist-name {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.15;
+    }
+
+    .scientist-years {
+      margin-top: 4px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .tag-list {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 13px 0;
+    }
+
+    .tag {
+      display: inline-flex;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 850;
+    }
+
+    .idea-box {
+      background: linear-gradient(180deg, #fff5fa, #ffffff);
+      border: 1px solid #f4c9dc;
+      border-radius: 20px;
+      padding: 14px;
+      margin: 12px 0;
+    }
+
+    .idea-box strong {
+      color: var(--primary);
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .mini {
+      border-radius: 18px;
+      background: #fff9fc;
+      border: 1px solid #f3d3e2;
+      padding: 12px;
+    }
+
+    .mini b {
+      display: block;
+      color: var(--primary-2);
+      margin-bottom: 4px;
+    }
+
+    .test-box {
+      margin-top: 14px;
+      border-radius: 20px;
+      background: #fbf4ff;
+      border: 1px solid #e5c4ef;
+      padding: 14px;
+    }
+
+    .test-question {
+      font-weight: 850;
+      margin-bottom: 10px;
+    }
+
+    .options {
+      display: grid;
+      gap: 8px;
+    }
+
+    .option {
+      display: flex;
+      gap: 9px;
+      align-items: flex-start;
+      border: 1px solid #ead0f0;
+      border-radius: 14px;
+      padding: 10px;
+      background: white;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .option:hover {
+      border-color: var(--primary-2);
+      background: #fff7fc;
+    }
+
+    .option input {
+      margin-top: 4px;
+      accent-color: var(--primary);
+    }
+
+    .check-btn {
+      margin-top: 12px;
+      border: 0;
+      cursor: pointer;
+      border-radius: 14px;
+      padding: 11px 14px;
+      color: white;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      font-weight: 850;
+    }
+
+    .result {
+      display: none;
+      margin-top: 10px;
+      padding: 11px 12px;
+      border-radius: 14px;
+      font-weight: 700;
+    }
+
+    .result.good {
+      display: block;
+      background: #e8f5e9;
+      color: var(--good);
+      border: 1px solid #a5d6a7;
+    }
+
+    .result.bad {
+      display: block;
+      background: #ffebee;
+      color: var(--bad);
+      border: 1px solid #ef9a9a;
+    }
+
+    .memory {
+      margin-top: 12px;
+      padding: 13px;
+      border-radius: 18px;
+      background: #fff8e1;
+      border: 1px solid #ffe082;
+      color: #6d4c00;
+      font-weight: 750;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    [data-lang="ru"] {
+      display: none;
+    }
+
+    body.ru [data-lang="kk"] {
+      display: none;
+    }
+
+    body.ru [data-lang="ru"] {
+      display: inline;
+    }
+
+    body.ru div[data-lang="ru"],
+    body.ru p[data-lang="ru"],
+    body.ru section[data-lang="ru"],
+    body.ru span[data-lang="ru"],
+    body.ru b[data-lang="ru"],
+    body.ru strong[data-lang="ru"] {
+      display: revert;
+    }
+
+    body.ru [data-lang="kk"] {
+      display: none !important;
+    }
+
+    .empty-state {
+      display: none;
+      margin-top: 20px;
+      padding: 22px;
+      border-radius: var(--radius);
+      border: 1px dashed #dc8eb5;
+      background: #fff5fa;
+      color: var(--muted);
+      font-weight: 750;
+      text-align: center;
+    }
+
+    @media (max-width: 850px) {
+      .hero {
+        padding: 26px 20px;
+        border-radius: 28px;
+      }
+
+      .hero-top {
+        flex-direction: column;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mini-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .search-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .page {
+        width: min(100% - 18px, 1180px);
+        padding-top: 12px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .scientist-card {
+        padding: 17px;
+        border-radius: 22px;
+      }
+
+      .scientist-name {
+        font-size: 21px;
+      }
+
+      .filter-btn {
+        font-size: 13px;
+        padding: 9px 11px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <header class="hero">
+      <div class="hero-top">
+        <div class="badge">
+          <span data-lang="kk">КТ / магистратураға дайындық</span>
+          <span data-lang="ru">Подготовка к КТ / магистратуре</span>
+        </div>
+
+        <div class="lang-switch" aria-label="Language switcher">
+          <button class="lang-btn active" data-set-lang="kk">KZ</button>
+          <button class="lang-btn" data-set-lang="ru">RU</button>
+        </div>
+      </div>
+
+      <h1>
+        <span data-lang="kk">Педагогикадағы ғалымдар</span>
+        <span data-lang="ru">Учёные в педагогике</span>
+      </h1>
+
+      <p>
+        <span data-lang="kk">
+          Бұл сайт педагогика, психология, дидактика, тәрбие теориясы және оқыту әдістемесіне қатысты негізгі ғалымдарды есте сақтауға арналған.
+        </span>
+        <span data-lang="ru">
+          Этот сайт помогает запомнить ключевых учёных, связанных с педагогикой, психологией, дидактикой, теорией воспитания и обучением.
+        </span>
+      </p>
+
+      <div class="hero-actions">
+        <div class="pill">
+          <span data-lang="kk">Іздеу бар</span>
+          <span data-lang="ru">Есть поиск</span>
+        </div>
+        <div class="pill">
+          <span data-lang="kk">Тақырыптық фильтрлер</span>
+          <span data-lang="ru">Тематические фильтры</span>
+        </div>
+        <div class="pill">
+          <span data-lang="kk">Тест және түсіндірме</span>
+          <span data-lang="ru">Тесты и объяснения</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="toolbar">
+      <div class="search-row">
+        <input
+          id="searchInput"
+          class="search-box"
+          type="search"
+          placeholder="Ғалымды, ұғымды немесе теорияны іздеңіз: Выготский, Пиаже, Коменский..."
+        />
+        <button class="clear-btn" id="clearSearch">
+          <span data-lang="kk">Тазалау</span>
+          <span data-lang="ru">Очистить</span>
+        </button>
+      </div>
+
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="all">
+          <span data-lang="kk">Барлығы</span>
+          <span data-lang="ru">Все</span>
+        </button>
+        <button class="filter-btn" data-filter="development">
+          <span data-lang="kk">Даму психологиясы</span>
+          <span data-lang="ru">Психология развития</span>
+        </button>
+        <button class="filter-btn" data-filter="didactics">
+          <span data-lang="kk">Дидактика</span>
+          <span data-lang="ru">Дидактика</span>
+        </button>
+        <button class="filter-btn" data-filter="education">
+          <span data-lang="kk">Тәрбие</span>
+          <span data-lang="ru">Воспитание</span>
+        </button>
+        <button class="filter-btn" data-filter="school">
+          <span data-lang="kk">Мектеп педагогикасы</span>
+          <span data-lang="ru">Школьная педагогика</span>
+        </button>
+        <button class="filter-btn" data-filter="humanistic">
+          <span data-lang="kk">Гуманистік педагогика</span>
+          <span data-lang="ru">Гуманистическая педагогика</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat-card">
+        <span class="stat-num" id="visibleCount">0</span>
+        <span class="stat-label">
+          <span data-lang="kk">көрсетілген карточка</span>
+          <span data-lang="ru">показанных карточек</span>
+        </span>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-num">5</span>
+        <span class="stat-label">
+          <span data-lang="kk">негізгі бағыт</span>
+          <span data-lang="ru">основных направлений</span>
+        </span>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-num">1</span>
+        <span class="stat-label">
+          <span data-lang="kk">дұрыс жауап</span>
+          <span data-lang="ru">правильный ответ</span>
+        </span>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-num">KZ/RU</span>
+        <span class="stat-label">
+          <span data-lang="kk">екі тіл режимі</span>
+          <span data-lang="ru">двуязычный режим</span>
+        </span>
+      </div>
+    </section>
+
+    <section class="section-title">
+      <h2>
+        <span data-lang="kk">Негізгі ғалымдар</span>
+        <span data-lang="ru">Ключевые учёные</span>
+      </h2>
+      <p>
+        <span data-lang="kk">
+          Әр карточкада ғалымның негізгі идеясы, педагогикадағы орны, КТ-де сұралуы мүмкін тірек ұғымдары және қысқа тест берілген.
+        </span>
+        <span data-lang="ru">
+          В каждой карточке указаны основная идея учёного, его значение в педагогике, возможные опорные понятия для теста и короткий вопрос.
+        </span>
+      </p>
+    </section>
+
+    <div class="empty-state" id="emptyState">
+      <span data-lang="kk">Бұл сұрау бойынша карточка табылмады. Басқа сөзбен іздеп көріңіз.</span>
+      <span data-lang="ru">По этому запросу карточка не найдена. Попробуйте другое слово.</span>
+    </div>
+
+    <section class="cards-grid" id="cardsGrid">
+
+      <!-- 1. Выготский -->
+      <article class="scientist-card" data-category="development didactics" data-keywords="выготский vygotsky виготский лев семенович зона ближайшего развития жақын даму аймағы мәдени тарихи теория развитие обучение речь мышление">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">Л.С. Выготский</h3>
+            <div class="scientist-years">1896–1934</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Даму психологиясы</span>
+            <span data-lang="ru">Психология развития</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Оқыту және даму</span>
+            <span data-lang="ru">Обучение и развитие</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            баланың дамуы әлеуметтік орта, тіл, қарым-қатынас және үлкендердің көмегі арқылы қалыптасады. Оқыту дамудың алдында жүріп, оны алға жылжыта алады.
+          </span>
+          <span data-lang="ru">
+            развитие ребёнка формируется через социальную среду, речь, общение и помощь взрослого. Обучение может идти впереди развития и вести его за собой.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Жақын даму аймағы</span>
+            <span data-lang="ru">Зона ближайшего развития</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Мұғалім оқушының өз бетімен орындай алмайтын, бірақ көмекпен орындай алатын деңгейін ескереді.</span>
+            <span data-lang="ru">Учитель учитывает уровень задач, которые ученик пока не выполняет сам, но выполняет с помощью.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Выготский = оқыту + әлеуметтік орта + жақын даму аймағы.</span>
+          <span data-lang="ru">Запомнить: Выготский = обучение + социальная среда + зона ближайшего развития.</span>
+        </div>
+
+        <div class="test-box" data-answer="b">
+          <div class="test-question">
+            <span data-lang="kk">Выготский теориясында оқытудың дамуға әсерін көрсететін негізгі ұғым қайсы?</span>
+            <span data-lang="ru">Какое понятие в теории Выготского показывает влияние обучения на развитие?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-vygotsky" value="a"> 
+              <span data-lang="kk">Сенсорлық тәжірибе кезеңдері</span>
+              <span data-lang="ru">Стадии сенсорного опыта</span>
+            </label>
+            <label class="option"><input type="radio" name="q-vygotsky" value="b"> 
+              <span data-lang="kk">Жақын даму аймағы</span>
+              <span data-lang="ru">Зона ближайшего развития</span>
+            </label>
+            <label class="option"><input type="radio" name="q-vygotsky" value="c"> 
+              <span data-lang="kk">Табиғи еркін тәрбие қағидасы</span>
+              <span data-lang="ru">Принцип естественного свободного воспитания</span>
+            </label>
+            <label class="option"><input type="radio" name="q-vygotsky" value="d"> 
+              <span data-lang="kk">Сынып-сабақ жүйесінің құрылымы</span>
+              <span data-lang="ru">Структура классно-урочной системы</span>
+            </label>
+            <label class="option"><input type="radio" name="q-vygotsky" value="e"> 
+              <span data-lang="kk">Қол еңбегіне негізделген тәрбие</span>
+              <span data-lang="ru">Воспитание на основе ручного труда</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 2. Пиаже -->
+      <article class="scientist-card" data-category="development" data-keywords="пиаже piaget жан жиаже когнитивное развитие когнитивтік даму интеллект стадии сенсомоторная предоперациональная конкретные операции формальные операции">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">Ж. Пиаже</h3>
+            <div class="scientist-years">1896–1980</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Когнитивтік даму</span>
+            <span data-lang="ru">Когнитивное развитие</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Жас ерекшелігі</span>
+            <span data-lang="ru">Возрастные особенности</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            баланың ойлауы жас кезеңдеріне қарай дамиды; танымдық даму баланың тәжірибесі, әрекеті және қоршаған ортамен өзара қатынасы арқылы қалыптасады.
+          </span>
+          <span data-lang="ru">
+            мышление ребёнка развивается по возрастным стадиям; когнитивное развитие связано с опытом, действием и взаимодействием с окружающей средой.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Когнитивтік даму кезеңдері</span>
+            <span data-lang="ru">Стадии когнитивного развития</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Оқыту мазмұны баланың жас ерекшелігі мен ойлау деңгейіне сәйкес беріледі.</span>
+            <span data-lang="ru">Содержание обучения соотносится с возрастом и уровнем мышления ребёнка.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Пиаже = бала ойлауының жас кезеңдері.</span>
+          <span data-lang="ru">Запомнить: Пиаже = возрастные стадии мышления ребёнка.</span>
+        </div>
+
+        <div class="test-box" data-answer="c">
+          <div class="test-question">
+            <span data-lang="kk">Пиаже еңбектерінде басты назар қай мәселеге аударылады?</span>
+            <span data-lang="ru">На какой проблеме сосредоточены работы Пиаже?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-piaget" value="a"> 
+              <span data-lang="kk">Педагогикалық ұжымның басқару стиліне</span>
+              <span data-lang="ru">На стиле управления педагогическим коллективом</span>
+            </label>
+            <label class="option"><input type="radio" name="q-piaget" value="b"> 
+              <span data-lang="kk">Оқытудағы көрнекілік қағидасына</span>
+              <span data-lang="ru">На принципе наглядности в обучении</span>
+            </label>
+            <label class="option"><input type="radio" name="q-piaget" value="c"> 
+              <span data-lang="kk">Баланың когнитивтік дамуының кезеңдеріне</span>
+              <span data-lang="ru">На стадиях когнитивного развития ребёнка</span>
+            </label>
+            <label class="option"><input type="radio" name="q-piaget" value="d"> 
+              <span data-lang="kk">Ұжым арқылы тәрбиелеу жүйесіне</span>
+              <span data-lang="ru">На системе воспитания через коллектив</span>
+            </label>
+            <label class="option"><input type="radio" name="q-piaget" value="e"> 
+              <span data-lang="kk">Оқу материалының ғылыми құрылымына</span>
+              <span data-lang="ru">На научной структуре учебного материала</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 3. Коменский -->
+      <article class="scientist-card" data-category="didactics school" data-keywords="коменский коменский ян амос comenio comenenius дидактика великая дидактика сынып сабақ жүйесі классно урочная система природосообразность наглядность">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">Я.А. Коменский</h3>
+            <div class="scientist-years">1592–1670</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Дидактика</span>
+            <span data-lang="ru">Дидактика</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Сынып-сабақ жүйесі</span>
+            <span data-lang="ru">Классно-урочная система</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            оқытудың жүйелілігі, табиғатқа сәйкестігі, көрнекілігі және баршаға білім беру қағидаларын негіздеді.
+          </span>
+          <span data-lang="ru">
+            обосновал системность обучения, природосообразность, наглядность и идею доступного образования для всех.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек еңбек</span>
+              <span data-lang="ru">Опорный труд</span>
+            </b>
+            <span data-lang="kk">«Ұлы дидактика»</span>
+            <span data-lang="ru">«Великая дидактика»</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Қазіргі мектептегі сабақ, сынып, оқу жылы, оқу тәртібі сияқты құрылымдардың теориялық негізін күшейтті.</span>
+            <span data-lang="ru">Укрепил теоретическую основу урока, класса, учебного года и организации школьного обучения.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Коменский = дидактика + сынып-сабақ жүйесі + көрнекілік.</span>
+          <span data-lang="ru">Запомнить: Коменский = дидактика + классно-урочная система + наглядность.</span>
+        </div>
+
+        <div class="test-box" data-answer="d">
+          <div class="test-question">
+            <span data-lang="kk">Коменскийдің педагогика тарихындағы орны қай тұжырыммен байланысты?</span>
+            <span data-lang="ru">С каким положением связано значение Коменского в истории педагогики?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-komensky" value="a"> 
+              <span data-lang="kk">Когнитивтік даму кезеңдерін сипаттаумен</span>
+              <span data-lang="ru">С описанием стадий когнитивного развития</span>
+            </label>
+            <label class="option"><input type="radio" name="q-komensky" value="b"> 
+              <span data-lang="kk">Ұжымдық тәрбиенің өндірістік моделін жасаумен</span>
+              <span data-lang="ru">С созданием производственной модели коллективного воспитания</span>
+            </label>
+            <label class="option"><input type="radio" name="q-komensky" value="c"> 
+              <span data-lang="kk">Бағдарламалап оқыту теориясын дамытумен</span>
+              <span data-lang="ru">С развитием теории программированного обучения</span>
+            </label>
+            <label class="option"><input type="radio" name="q-komensky" value="d"> 
+              <span data-lang="kk">Сынып-сабақ жүйесі мен дидактикалық қағидаларды негіздеумен</span>
+              <span data-lang="ru">С обоснованием классно-урочной системы и дидактических принципов</span>
+            </label>
+            <label class="option"><input type="radio" name="q-komensky" value="e"> 
+              <span data-lang="kk">Мектепішілік менеджмент құрылымын анықтаумен</span>
+              <span data-lang="ru">С определением структуры внутришкольного менеджмента</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 4. Ушинский -->
+      <article class="scientist-card" data-category="education didactics school" data-keywords="ушинский ushin sky константин дмитриевич халықтық тәрбие народность воспитания родной язык педагогика ана тілі еңбек тәрбие">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">К.Д. Ушинский</h3>
+            <div class="scientist-years">1823–1871</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Халықтық тәрбие</span>
+            <span data-lang="ru">Народность воспитания</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Ана тілі</span>
+            <span data-lang="ru">Родной язык</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            тәрбие халықтың мәдениетімен, ана тілімен, ұлттық дәстүрімен және еңбектің тәрбиелік мәнімен байланысты болуы керек.
+          </span>
+          <span data-lang="ru">
+            воспитание должно быть связано с культурой народа, родным языком, национальными традициями и воспитательным значением труда.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Тәрбиенің халықтық сипаты</span>
+            <span data-lang="ru">Народность воспитания</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Мектеп пен тәрбие жүйесінде ұлттық мәдениет пен ана тілінің маңызын айқындады.</span>
+            <span data-lang="ru">Показал значение национальной культуры и родного языка в школе и воспитании.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Ушинский = халықтық тәрбие + ана тілі + еңбек.</span>
+          <span data-lang="ru">Запомнить: Ушинский = народность воспитания + родной язык + труд.</span>
+        </div>
+
+        <div class="test-box" data-answer="a">
+          <div class="test-question">
+            <span data-lang="kk">Ушинский педагогикасында тәрбиенің маңызды негізі ретінде не қарастырылады?</span>
+            <span data-lang="ru">Что рассматривается как важная основа воспитания в педагогике Ушинского?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-ushinsky" value="a"> 
+              <span data-lang="kk">Халық мәдениеті, ана тілі және еңбек тәрбиесі</span>
+              <span data-lang="ru">Культура народа, родной язык и трудовое воспитание</span>
+            </label>
+            <label class="option"><input type="radio" name="q-ushinsky" value="b"> 
+              <span data-lang="kk">Ойлаудың формалды операциялар кезеңі</span>
+              <span data-lang="ru">Стадия формальных операций мышления</span>
+            </label>
+            <label class="option"><input type="radio" name="q-ushinsky" value="c"> 
+              <span data-lang="kk">Ұжымдық жазалау мен талап қою жүйесі</span>
+              <span data-lang="ru">Система коллективного наказания и требований</span>
+            </label>
+            <label class="option"><input type="radio" name="q-ushinsky" value="d"> 
+              <span data-lang="kk">Мектепті экономикалық ұйым ретінде басқару</span>
+              <span data-lang="ru">Управление школой как экономической организацией</span>
+            </label>
+            <label class="option"><input type="radio" name="q-ushinsky" value="e"> 
+              <span data-lang="kk">Дамыта оқытудың оқу әрекеті құрылымы</span>
+              <span data-lang="ru">Структура учебной деятельности в развивающем обучении</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+            <!-- 5. Макаренко -->
+      <article class="scientist-card" data-category="education school" data-keywords="макаренко anton makarenko антон семенович ұжым коллектив воспитание через коллектив требование уважение тәрбие еңбек тәртібі">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">А.С. Макаренко</h3>
+            <div class="scientist-years">1888–1939</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Ұжым арқылы тәрбиелеу</span>
+            <span data-lang="ru">Воспитание через коллектив</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Тәртіп және жауапкершілік</span>
+            <span data-lang="ru">Дисциплина и ответственность</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            тұлға ұжымдық өмір, ортақ мақсат, қоғамдық жауапкершілік және тәртіп арқылы қалыптасады. Тәрбие талап пен құрметтің бірлігіне сүйенеді.
+          </span>
+          <span data-lang="ru">
+            личность формируется через коллективную жизнь, общую цель, общественную ответственность и дисциплину. Воспитание опирается на единство требования и уважения.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Ұжымда және ұжым арқылы тәрбиелеу</span>
+            <span data-lang="ru">Воспитание в коллективе и через коллектив</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Оқушы тұлғасын қоғамдық пайдалы іс, тәртіп, жауапкершілік және ұжымдық қатынас арқылы тәрбиелеуді көрсетті.</span>
+            <span data-lang="ru">Показал воспитание личности через общественно полезную деятельность, дисциплину, ответственность и коллективные отношения.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Макаренко = ұжым + талап + құрмет + жауапкершілік.</span>
+          <span data-lang="ru">Запомнить: Макаренко = коллектив + требование + уважение + ответственность.</span>
+        </div>
+
+        <div class="test-box" data-answer="e">
+          <div class="test-question">
+            <span data-lang="kk">Макаренко педагогикасында тұлғаны қалыптастырудың басты ортасы қандай?</span>
+            <span data-lang="ru">Какая среда считается главной для формирования личности в педагогике Макаренко?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-makarenko" value="a">
+              <span data-lang="kk">Жеке танымдық операциялардың кезеңдік дамуы</span>
+              <span data-lang="ru">Поэтапное развитие индивидуальных познавательных операций</span>
+            </label>
+            <label class="option"><input type="radio" name="q-makarenko" value="b">
+              <span data-lang="kk">Табиғатқа сәйкес еркін тәрбие кеңістігі</span>
+              <span data-lang="ru">Пространство свободного воспитания согласно природе</span>
+            </label>
+            <label class="option"><input type="radio" name="q-makarenko" value="c">
+              <span data-lang="kk">Сабақтағы көрнекілік пен жүйелілік құрылымы</span>
+              <span data-lang="ru">Структура наглядности и системности на уроке</span>
+            </label>
+            <label class="option"><input type="radio" name="q-makarenko" value="d">
+              <span data-lang="kk">Жақын даму аймағындағы көмек түрлері</span>
+              <span data-lang="ru">Виды помощи в зоне ближайшего развития</span>
+            </label>
+            <label class="option"><input type="radio" name="q-makarenko" value="e">
+              <span data-lang="kk">Ұжымдық өмір, ортақ мақсат және қоғамдық жауапкершілік</span>
+              <span data-lang="ru">Коллективная жизнь, общая цель и общественная ответственность</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 6. Сухомлинский -->
+      <article class="scientist-card" data-category="education humanistic school" data-keywords="сухомлинский vasyl sukho mlinsky василий александрович гуманистік педагогика жүрекпен тәрбие школа радости павлыш мектебі бала тұлғасы">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">В.А. Сухомлинский</h3>
+            <div class="scientist-years">1918–1970</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Гуманистік педагогика</span>
+            <span data-lang="ru">Гуманистическая педагогика</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Баланың тұлғасы</span>
+            <span data-lang="ru">Личность ребёнка</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            тәрбие баланың рухани әлеміне, адамгершілігіне, жүрегіне және жеке тұлғалық қадір-қасиетіне сүйенуі керек.
+          </span>
+          <span data-lang="ru">
+            воспитание должно опираться на духовный мир ребёнка, нравственность, сердце и личностное достоинство.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Баланың жүрегіне жол табу</span>
+            <span data-lang="ru">Путь к сердцу ребёнка</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Мұғалімнің баланы түсінуі, құрметтеуі, мейірімді қарым-қатынас орнатуы тәрбиенің өзегі ретінде қарастырылады.</span>
+            <span data-lang="ru">Понимание, уважение и доброжелательное отношение учителя к ребёнку рассматриваются как основа воспитания.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Сухомлинский = бала жүрегі + адамгершілік + мейірім.</span>
+          <span data-lang="ru">Запомнить: Сухомлинский = сердце ребёнка + нравственность + гуманность.</span>
+        </div>
+
+        <div class="test-box" data-answer="b">
+          <div class="test-question">
+            <span data-lang="kk">Сухомлинский педагогикасының басты бағыты қайсы?</span>
+            <span data-lang="ru">Какое направление является главным в педагогике Сухомлинского?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-sukhomlinsky" value="a">
+              <span data-lang="kk">Мектепті әкімшілік басқарудың қатаң құрылымы</span>
+              <span data-lang="ru">Жёсткая структура административного управления школой</span>
+            </label>
+            <label class="option"><input type="radio" name="q-sukhomlinsky" value="b">
+              <span data-lang="kk">Баланың тұлғасын адамгершілік және мейірім арқылы дамыту</span>
+              <span data-lang="ru">Развитие личности ребёнка через нравственность и гуманность</span>
+            </label>
+            <label class="option"><input type="radio" name="q-sukhomlinsky" value="c">
+              <span data-lang="kk">Ойлау операцияларының жас кезеңдерін анықтау</span>
+              <span data-lang="ru">Определение возрастных стадий мыслительных операций</span>
+            </label>
+            <label class="option"><input type="radio" name="q-sukhomlinsky" value="d">
+              <span data-lang="kk">Оқыту материалын алгоритмдік қадамдарға бөлу</span>
+              <span data-lang="ru">Деление учебного материала на алгоритмические шаги</span>
+            </label>
+            <label class="option"><input type="radio" name="q-sukhomlinsky" value="e">
+              <span data-lang="kk">Дидактикалық қағидаларды сынып жүйесімен байланыстыру</span>
+              <span data-lang="ru">Связь дидактических принципов с классной системой</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 7. Жан-Жак Руссо -->
+      <article class="scientist-card" data-category="education humanistic" data-keywords="руссо rousseau жан жак жан-жак эмиль свободное воспитание табиғи тәрбие еркін тәрбие природосообразность">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">Ж.-Ж. Руссо</h3>
+            <div class="scientist-years">1712–1778</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Табиғи тәрбие</span>
+            <span data-lang="ru">Естественное воспитание</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Еркін тәрбие</span>
+            <span data-lang="ru">Свободное воспитание</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            бала табиғатына сәйкес дамуы тиіс; тәрбие баланың еркіндігін, табиғи дамуын және жеке тәжірибесін ескеруі керек.
+          </span>
+          <span data-lang="ru">
+            ребёнок должен развиваться согласно своей природе; воспитание должно учитывать свободу, естественное развитие и личный опыт ребёнка.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек еңбек</span>
+              <span data-lang="ru">Опорный труд</span>
+            </b>
+            <span data-lang="kk">«Эмиль, немесе тәрбие туралы»</span>
+            <span data-lang="ru">«Эмиль, или О воспитании»</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Балаға дайын ережені күштеп беруден гөрі оның табиғи дамуы мен тәжірибесіне сүйенуді ұсынды.</span>
+            <span data-lang="ru">Предлагал опираться на естественное развитие и опыт ребёнка, а не на принудительное усвоение готовых правил.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Руссо = табиғи даму + еркін тәрбие + «Эмиль».</span>
+          <span data-lang="ru">Запомнить: Руссо = естественное развитие + свободное воспитание + «Эмиль».</span>
+        </div>
+
+        <div class="test-box" data-answer="c">
+          <div class="test-question">
+            <span data-lang="kk">Руссоның педагогикалық көзқарасында қай идея басым?</span>
+            <span data-lang="ru">Какая идея является ведущей в педагогических взглядах Руссо?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-rousseau" value="a">
+              <span data-lang="kk">Ұжымдық тәртіп арқылы тұлғаны қалыптастыру</span>
+              <span data-lang="ru">Формирование личности через коллективную дисциплину</span>
+            </label>
+            <label class="option"><input type="radio" name="q-rousseau" value="b">
+              <span data-lang="kk">Дамыта оқытудағы оқу әрекетін ұйымдастыру</span>
+              <span data-lang="ru">Организация учебной деятельности в развивающем обучении</span>
+            </label>
+            <label class="option"><input type="radio" name="q-rousseau" value="c">
+              <span data-lang="kk">Баланың табиғатына сәйкес еркін тәрбиелеу</span>
+              <span data-lang="ru">Свободное воспитание согласно природе ребёнка</span>
+            </label>
+            <label class="option"><input type="radio" name="q-rousseau" value="d">
+              <span data-lang="kk">Оқытудың сынып-сабақ құрылымын бекіту</span>
+              <span data-lang="ru">Закрепление классно-урочной структуры обучения</span>
+            </label>
+            <label class="option"><input type="radio" name="q-rousseau" value="e">
+              <span data-lang="kk">Білім беру ұйымын стратегиялық басқару</span>
+              <span data-lang="ru">Стратегическое управление образовательной организацией</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 8. Песталоцци -->
+      <article class="scientist-card" data-category="education didactics humanistic" data-keywords="песталоцци pestalozzi иоганн генрих элементарное образование жүрек ақыл қол сердце голова рука гуманистическая педагогика">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">И.Г. Песталоцци</h3>
+            <div class="scientist-years">1746–1827</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Элементарлық білім</span>
+            <span data-lang="ru">Элементарное образование</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Гуманистік тәрбие</span>
+            <span data-lang="ru">Гуманистическое воспитание</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            тәрбиеде баланың ақыл-ойы, жүрегі және қол еңбегі үйлесімді дамуы керек. Білім қарапайымнан күрделіге қарай беріледі.
+          </span>
+          <span data-lang="ru">
+            в воспитании должны гармонично развиваться ум, сердце и ручной труд ребёнка. Обучение строится от простого к сложному.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек формула</span>
+              <span data-lang="ru">Опорная формула</span>
+            </b>
+            <span data-lang="kk">Ақыл — жүрек — қол</span>
+            <span data-lang="ru">Голова — сердце — рука</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Баланың жан-жақты дамуын, қарапайым білім элементтерін және еңбекпен байланысты тәрбиені негіздеді.</span>
+            <span data-lang="ru">Обосновал всестороннее развитие ребёнка, элементарное обучение и связь воспитания с трудом.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Песталоцци = ақыл + жүрек + қол.</span>
+          <span data-lang="ru">Запомнить: Песталоцци = голова + сердце + рука.</span>
+        </div>
+
+        <div class="test-box" data-answer="a">
+          <div class="test-question">
+            <span data-lang="kk">Песталоцци тәрбиесінде үйлесімді дамуы тиіс негізгі құрамдар қайсы?</span>
+            <span data-lang="ru">Какие компоненты должны гармонично развиваться в воспитании Песталоцци?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-pestalozzi" value="a">
+              <span data-lang="kk">Ақыл, жүрек және қол еңбегі</span>
+              <span data-lang="ru">Ум, сердце и ручной труд</span>
+            </label>
+            <label class="option"><input type="radio" name="q-pestalozzi" value="b">
+              <span data-lang="kk">Ұжым, тәртіп және қоғамдық талап</span>
+              <span data-lang="ru">Коллектив, дисциплина и общественное требование</span>
+            </label>
+            <label class="option"><input type="radio" name="q-pestalozzi" value="c">
+              <span data-lang="kk">Ассимиляция, аккомодация және операциялар</span>
+              <span data-lang="ru">Ассимиляция, аккомодация и операции</span>
+            </label>
+            <label class="option"><input type="radio" name="q-pestalozzi" value="d">
+              <span data-lang="kk">Сабақ, сынып және оқу жылы</span>
+              <span data-lang="ru">Урок, класс и учебный год</span>
+            </label>
+            <label class="option"><input type="radio" name="q-pestalozzi" value="e">
+              <span data-lang="kk">Мақсат, жоспар және басқару шешімі</span>
+              <span data-lang="ru">Цель, план и управленческое решение</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 9. Дистервег -->
+      <article class="scientist-card" data-category="didactics school" data-keywords="дистервег disterweg адольф дидактика развивающее обучение самодеятельность оқушы белсенділігі мұғалім teacher">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">А. Дистервег</h3>
+            <div class="scientist-years">1790–1866</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Дамытушы оқыту</span>
+            <span data-lang="ru">Развивающее обучение</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Оқушы белсенділігі</span>
+            <span data-lang="ru">Активность ученика</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            оқыту оқушының өзіндік ойлауын, белсенділігін және дербес әрекетін дамытуы керек; мұғалім дайын білім беруші ғана емес, дамуға бағыттаушы.
+          </span>
+          <span data-lang="ru">
+            обучение должно развивать самостоятельное мышление, активность и деятельность ученика; учитель не просто передаёт знания, а направляет развитие.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Дамытушы оқыту идеясы</span>
+            <span data-lang="ru">Идея развивающего обучения</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Сабақта оқушының белсенді ойлауын, өздігінен ізденуін және саналы оқуын маңызды етті.</span>
+            <span data-lang="ru">Подчёркивал активное мышление, самостоятельный поиск и осознанное учение ученика.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Дистервег = оқушыны ойландыру + дербестік + даму.</span>
+          <span data-lang="ru">Запомнить: Дистервег = заставить ученика мыслить + самостоятельность + развитие.</span>
+        </div>
+
+        <div class="test-box" data-answer="d">
+          <div class="test-question">
+            <span data-lang="kk">Дистервег көзқарасында оқытудың маңызды міндеті қандай?</span>
+            <span data-lang="ru">Какова важная задача обучения во взглядах Дистервега?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-disterweg" value="a">
+              <span data-lang="kk">Оқушыларды ұжымдық тәртіп арқылы басқару</span>
+              <span data-lang="ru">Управление учащимися через коллективную дисциплину</span>
+            </label>
+            <label class="option"><input type="radio" name="q-disterweg" value="b">
+              <span data-lang="kk">Баланың табиғи еркіндігін толық бақылаусыз қалдыру</span>
+              <span data-lang="ru">Оставление естественной свободы ребёнка без контроля</span>
+            </label>
+            <label class="option"><input type="radio" name="q-disterweg" value="c">
+              <span data-lang="kk">Басқару шешімдерін мектеп құрылымына енгізу</span>
+              <span data-lang="ru">Внедрение управленческих решений в структуру школы</span>
+            </label>
+            <label class="option"><input type="radio" name="q-disterweg" value="d">
+              <span data-lang="kk">Оқушының ойлауын, белсенділігін және дербестігін дамыту</span>
+              <span data-lang="ru">Развитие мышления, активности и самостоятельности ученика</span>
+            </label>
+            <label class="option"><input type="radio" name="q-disterweg" value="e">
+              <span data-lang="kk">Когнитивтік кезеңдерді жас бойынша жіктеу</span>
+              <span data-lang="ru">Классификация когнитивных стадий по возрасту</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 10. Гербарт -->
+      <article class="scientist-card" data-category="didactics education" data-keywords="гербарт herbart иоганн фридрих тәрбиелей оқыту воспитывающее обучение формальные ступени интерес нравственность">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">И.Ф. Гербарт</h3>
+            <div class="scientist-years">1776–1841</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Тәрбиелей оқыту</span>
+            <span data-lang="ru">Воспитывающее обучение</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Дидактикалық сатылар</span>
+            <span data-lang="ru">Дидактические ступени</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            оқыту білім берумен қатар оқушының адамгершілік сапаларын қалыптастыруға қызмет етуі тиіс.
+          </span>
+          <span data-lang="ru">
+            обучение должно не только давать знания, но и формировать нравственные качества ученика.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Тәрбиелей оқыту</span>
+            <span data-lang="ru">Воспитывающее обучение</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Білім мазмұны мен тәрбие мақсатын бірлікте қарастыруға ықпал етті.</span>
+            <span data-lang="ru">Способствовал рассмотрению содержания обучения и цели воспитания в единстве.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Гербарт = оқыту тәрбиелеуі керек.</span>
+          <span data-lang="ru">Запомнить: Гербарт = обучение должно воспитывать.</span>
+        </div>
+
+        <div class="test-box" data-answer="b">
+          <div class="test-question">
+            <span data-lang="kk">Гербарт педагогикасындағы негізгі ұғымдардың бірі қайсы?</span>
+            <span data-lang="ru">Какое понятие является одним из основных в педагогике Гербарта?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-herbart" value="a">
+              <span data-lang="kk">Жақын даму аймағы</span>
+              <span data-lang="ru">Зона ближайшего развития</span>
+            </label>
+            <label class="option"><input type="radio" name="q-herbart" value="b">
+              <span data-lang="kk">Тәрбиелей оқыту</span>
+              <span data-lang="ru">Воспитывающее обучение</span>
+            </label>
+            <label class="option"><input type="radio" name="q-herbart" value="c">
+              <span data-lang="kk">Еркін табиғи тәрбие</span>
+              <span data-lang="ru">Свободное естественное воспитание</span>
+            </label>
+            <label class="option"><input type="radio" name="q-herbart" value="d">
+              <span data-lang="kk">Ұжымдық қоғамдық жауапкершілік</span>
+              <span data-lang="ru">Коллективная общественная ответственность</span>
+            </label>
+            <label class="option"><input type="radio" name="q-herbart" value="e">
+              <span data-lang="kk">Когнитивтік операция кезеңдері</span>
+              <span data-lang="ru">Стадии когнитивных операций</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+            <!-- 11. Дьюи -->
+      <article class="scientist-card" data-category="didactics humanistic school" data-keywords="дьюи dewey john джон прагматизм learning by doing обучение через деятельность әрекет арқылы оқыту тәжірибе демократиялық білім">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">Дж. Дьюи</h3>
+            <div class="scientist-years">1859–1952</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Іс-әрекет арқылы оқыту</span>
+            <span data-lang="ru">Обучение через деятельность</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Прагматикалық педагогика</span>
+            <span data-lang="ru">Прагматическая педагогика</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            білім оқушының белсенді тәжірибесі, мәселені шешуі және практикалық әрекеті арқылы қалыптасады.
+          </span>
+          <span data-lang="ru">
+            знание формируется через активный опыт ученика, решение проблем и практическую деятельность.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Learning by doing — әрекет арқылы үйрену</span>
+            <span data-lang="ru">Learning by doing — обучение через действие</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Оқу процесін оқушының тәжірибесімен, қызығушылығымен және нақты өмірлік мәселелермен байланыстырды.</span>
+            <span data-lang="ru">Связал обучение с опытом ученика, интересами и реальными жизненными проблемами.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Дьюи = тәжірибе + әрекет + мәселені шешу.</span>
+          <span data-lang="ru">Запомнить: Дьюи = опыт + действие + решение проблем.</span>
+        </div>
+
+        <div class="test-box" data-answer="d">
+          <div class="test-question">
+            <span data-lang="kk">Дьюи педагогикасында білім қалай қалыптасады?</span>
+            <span data-lang="ru">Как формируется знание в педагогике Дьюи?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-dewey" value="a">
+              <span data-lang="kk">Оқушының жас кезеңдерін алдын ала қатаң жіктеу арқылы</span>
+              <span data-lang="ru">Через строгую предварительную классификацию возрастных стадий</span>
+            </label>
+            <label class="option"><input type="radio" name="q-dewey" value="b">
+              <span data-lang="kk">Ұжымдық тәртіп пен қоғамдық талапты күшейту арқылы</span>
+              <span data-lang="ru">Через усиление коллективной дисциплины и общественного требования</span>
+            </label>
+            <label class="option"><input type="radio" name="q-dewey" value="c">
+              <span data-lang="kk">Табиғи еркіндікті бақылаусыз қалдыру арқылы</span>
+              <span data-lang="ru">Через оставление естественной свободы без педагогического контроля</span>
+            </label>
+            <label class="option"><input type="radio" name="q-dewey" value="d">
+              <span data-lang="kk">Белсенді тәжірибе, әрекет және мәселені шешу арқылы</span>
+              <span data-lang="ru">Через активный опыт, действие и решение проблем</span>
+            </label>
+            <label class="option"><input type="radio" name="q-dewey" value="e">
+              <span data-lang="kk">Дайын білімді механикалық қайталау арқылы</span>
+              <span data-lang="ru">Через механическое повторение готового знания</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 12. Монтессори -->
+      <article class="scientist-card" data-category="development humanistic school" data-keywords="монтессори montessori maria мария еркін орта подготовленная среда prepared environment самостоятельность сенсорлық даму өзіндік даму">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">М. Монтессори</h3>
+            <div class="scientist-years">1870–1952</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Өзіндік даму</span>
+            <span data-lang="ru">Саморазвитие</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Дайындалған орта</span>
+            <span data-lang="ru">Подготовленная среда</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            бала арнайы дайындалған ортада дербес әрекет арқылы дамиды; мұғалім баланың табиғи белсенділігін бақылап, қажет кезде бағыт береді.
+          </span>
+          <span data-lang="ru">
+            ребёнок развивается через самостоятельную деятельность в специально подготовленной среде; педагог наблюдает и направляет при необходимости.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Дайындалған білім беру ортасы</span>
+            <span data-lang="ru">Подготовленная образовательная среда</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Баланың дербестігін, сенсорлық дамуын, таңдау еркіндігін және өзін-өзі тәрбиелеуін қолдады.</span>
+            <span data-lang="ru">Поддерживала самостоятельность ребёнка, сенсорное развитие, свободу выбора и самовоспитание.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Монтессори = дайындалған орта + дербестік + өзіндік даму.</span>
+          <span data-lang="ru">Запомнить: Монтессори = подготовленная среда + самостоятельность + саморазвитие.</span>
+        </div>
+
+        <div class="test-box" data-answer="c">
+          <div class="test-question">
+            <span data-lang="kk">Монтессори жүйесінде баланың дамуына ерекше әсер ететін жағдай қандай?</span>
+            <span data-lang="ru">Какое условие особенно влияет на развитие ребёнка в системе Монтессори?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-montessori" value="a">
+              <span data-lang="kk">Сынып-сабақ жүйесін қатаң сақтау</span>
+              <span data-lang="ru">Строгое соблюдение классно-урочной системы</span>
+            </label>
+            <label class="option"><input type="radio" name="q-montessori" value="b">
+              <span data-lang="kk">Ұжымдық талаптың тәрбиелік күшін арттыру</span>
+              <span data-lang="ru">Усиление воспитательной силы коллективного требования</span>
+            </label>
+            <label class="option"><input type="radio" name="q-montessori" value="c">
+              <span data-lang="kk">Дербес әрекетке арналған дайындалған орта</span>
+              <span data-lang="ru">Подготовленная среда для самостоятельной деятельности</span>
+            </label>
+            <label class="option"><input type="radio" name="q-montessori" value="d">
+              <span data-lang="kk">Когнитивтік кезеңдерді жас бойынша бөлу</span>
+              <span data-lang="ru">Разделение когнитивных стадий по возрасту</span>
+            </label>
+            <label class="option"><input type="radio" name="q-montessori" value="e">
+              <span data-lang="kk">Тәрбиелей оқыту сатыларын бекіту</span>
+              <span data-lang="ru">Закрепление ступеней воспитывающего обучения</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 13. Эльконин -->
+      <article class="scientist-card" data-category="development didactics" data-keywords="эльконин elkonin даниил борисович жас ерекшелік психологиясы ведущая деятельность жетекші іс әрекет ойын оқу әрекеті даму кезеңдері">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">Д.Б. Эльконин</h3>
+            <div class="scientist-years">1904–1984</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Жетекші іс-әрекет</span>
+            <span data-lang="ru">Ведущая деятельность</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Жас кезеңдері</span>
+            <span data-lang="ru">Возрастная периодизация</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            баланың психикалық дамуы әр жас кезеңінде жетекші іс-әрекет арқылы түсіндіріледі: ойын, оқу, қарым-қатынас және басқа әрекеттер даму көзі болады.
+          </span>
+          <span data-lang="ru">
+            психическое развитие ребёнка объясняется через ведущую деятельность каждого возрастного периода: игру, учение, общение и другие формы активности.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Жетекші іс-әрекет</span>
+            <span data-lang="ru">Ведущая деятельность</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Оқыту мен тәрбиеде баланың жасына сәйкес негізгі әрекет түрін ескеруге мүмкіндік береді.</span>
+            <span data-lang="ru">Позволяет учитывать основной вид деятельности ребёнка на конкретном возрастном этапе.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Эльконин = жас кезеңі + жетекші іс-әрекет.</span>
+          <span data-lang="ru">Запомнить: Эльконин = возрастной период + ведущая деятельность.</span>
+        </div>
+
+        <div class="test-box" data-answer="a">
+          <div class="test-question">
+            <span data-lang="kk">Эльконин теориясында баланың даму кезеңдерін түсіндіретін негізгі ұғым қайсы?</span>
+            <span data-lang="ru">Какое понятие объясняет периоды развития ребёнка в теории Эльконина?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-elkonin" value="a">
+              <span data-lang="kk">Жетекші іс-әрекет</span>
+              <span data-lang="ru">Ведущая деятельность</span>
+            </label>
+            <label class="option"><input type="radio" name="q-elkonin" value="b">
+              <span data-lang="kk">Тәрбиенің халықтық сипаты</span>
+              <span data-lang="ru">Народность воспитания</span>
+            </label>
+            <label class="option"><input type="radio" name="q-elkonin" value="c">
+              <span data-lang="kk">Дайындалған білім беру ортасы</span>
+              <span data-lang="ru">Подготовленная образовательная среда</span>
+            </label>
+            <label class="option"><input type="radio" name="q-elkonin" value="d">
+              <span data-lang="kk">Ұжым арқылы тәрбиелеу</span>
+              <span data-lang="ru">Воспитание через коллектив</span>
+            </label>
+            <label class="option"><input type="radio" name="q-elkonin" value="e">
+              <span data-lang="kk">Сынып-сабақ жүйесі</span>
+              <span data-lang="ru">Классно-урочная система</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 14. Давыдов -->
+      <article class="scientist-card" data-category="development didactics school" data-keywords="давыдов davydov василий васильевич дамыта оқыту развивающее обучение теоретическое мышление оқу әрекеті учебная деятельность эльконин давыдов">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">В.В. Давыдов</h3>
+            <div class="scientist-years">1930–1998</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Дамыта оқыту</span>
+            <span data-lang="ru">Развивающее обучение</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Теориялық ойлау</span>
+            <span data-lang="ru">Теоретическое мышление</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            оқыту оқушының теориялық ойлауын, оқу әрекетін және ұғымдарды саналы меңгеруін дамытуы керек.
+          </span>
+          <span data-lang="ru">
+            обучение должно развивать теоретическое мышление, учебную деятельность и осознанное усвоение понятий.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Дамыта оқыту жүйесі</span>
+            <span data-lang="ru">Система развивающего обучения</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Оқушы білімді дайын күйінде алмай, ұғымның ішкі байланысын түсіну арқылы меңгереді.</span>
+            <span data-lang="ru">Ученик усваивает знание через понимание внутренних связей понятия, а не как готовую информацию.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Давыдов = дамыта оқыту + теориялық ойлау.</span>
+          <span data-lang="ru">Запомнить: Давыдов = развивающее обучение + теоретическое мышление.</span>
+        </div>
+
+        <div class="test-box" data-answer="e">
+          <div class="test-question">
+            <span data-lang="kk">Давыдов жүйесінде оқытудың негізгі нәтижесі ретінде не қарастырылады?</span>
+            <span data-lang="ru">Что рассматривается как основной результат обучения в системе Давыдова?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-davydov" value="a">
+              <span data-lang="kk">Табиғи еркіндікті педагогикалық бақылаудан бөлу</span>
+              <span data-lang="ru">Отделение естественной свободы от педагогического контроля</span>
+            </label>
+            <label class="option"><input type="radio" name="q-davydov" value="b">
+              <span data-lang="kk">Ұжымдық жауапкершілікті тәртіп арқылы бекіту</span>
+              <span data-lang="ru">Закрепление коллективной ответственности через дисциплину</span>
+            </label>
+            <label class="option"><input type="radio" name="q-davydov" value="c">
+              <span data-lang="kk">Мектеп құрылымын әкімшілік жоспарлау</span>
+              <span data-lang="ru">Административное планирование школьной структуры</span>
+            </label>
+            <label class="option"><input type="radio" name="q-davydov" value="d">
+              <span data-lang="kk">Сенсорлық тәжірибені дайын ортада ұйымдастыру</span>
+              <span data-lang="ru">Организация сенсорного опыта в подготовленной среде</span>
+            </label>
+            <label class="option"><input type="radio" name="q-davydov" value="e">
+              <span data-lang="kk">Теориялық ойлау мен оқу әрекетін дамыту</span>
+              <span data-lang="ru">Развитие теоретического мышления и учебной деятельности</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 15. Леонтьев -->
+      <article class="scientist-card" data-category="development didactics" data-keywords="леонтьев leontiev алексей николаевич әрекет теориясы теория деятельности деятельность мотив цель операция іс әрекет сана тұлға">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">А.Н. Леонтьев</h3>
+            <div class="scientist-years">1903–1979</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Іс-әрекет теориясы</span>
+            <span data-lang="ru">Теория деятельности</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Мотив және мақсат</span>
+            <span data-lang="ru">Мотив и цель</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            адамның санасы мен тұлғасы іс-әрекетте қалыптасады; әрекет мотив, мақсат, амал және нәтиже арқылы талданады.
+          </span>
+          <span data-lang="ru">
+            сознание и личность человека формируются в деятельности; деятельность анализируется через мотив, цель, действие, операцию и результат.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Іс-әрекет құрылымы</span>
+            <span data-lang="ru">Структура деятельности</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Оқытуды оқушының белсенді оқу әрекеті, мотиві және мақсатымен байланысты түсіндіруге мүмкіндік береді.</span>
+            <span data-lang="ru">Позволяет рассматривать обучение как активную учебную деятельность с мотивом и целью.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Леонтьев = іс-әрекет + мотив + мақсат.</span>
+          <span data-lang="ru">Запомнить: Леонтьев = деятельность + мотив + цель.</span>
+        </div>
+
+        <div class="test-box" data-answer="b">
+          <div class="test-question">
+            <span data-lang="kk">Леонтьевтің теориясында тұлға мен сана негізінен немен байланысты түсіндіріледі?</span>
+            <span data-lang="ru">С чем в теории Леонтьева прежде всего связано формирование личности и сознания?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-leontiev" value="a">
+              <span data-lang="kk">Дайындалған заттық ортадағы еркін таңдауымен</span>
+              <span data-lang="ru">Со свободным выбором в подготовленной предметной среде</span>
+            </label>
+            <label class="option"><input type="radio" name="q-leontiev" value="b">
+              <span data-lang="kk">Мотиві мен мақсаты бар іс-әрекетімен</span>
+              <span data-lang="ru">С деятельностью, имеющей мотив и цель</span>
+            </label>
+            <label class="option"><input type="radio" name="q-leontiev" value="c">
+              <span data-lang="kk">Көрнекілік пен сынып-сабақ жүйесінің тәртібімен</span>
+              <span data-lang="ru">С наглядностью и порядком классно-урочной системы</span>
+            </label>
+            <label class="option"><input type="radio" name="q-leontiev" value="d">
+              <span data-lang="kk">Халықтық тәрбие мен ана тілінің байланысымен</span>
+              <span data-lang="ru">Со связью народного воспитания и родного языка</span>
+            </label>
+            <label class="option"><input type="radio" name="q-leontiev" value="e">
+              <span data-lang="kk">Табиғи еркін дамудың жас ерекшелігімен</span>
+              <span data-lang="ru">С возрастными особенностями естественного свободного развития</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+            <!-- 16. Гальперин -->
+      <article class="scientist-card" data-category="development didactics" data-keywords="гальперин galperin петр яковлевич поэтапное формирование умственных действий ақыл ой әрекеттерін кезеңдеп қалыптастыру ориентировочная основа действия оод">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">П.Я. Гальперин</h3>
+            <div class="scientist-years">1902–1988</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Ақыл-ой әрекеті</span>
+            <span data-lang="ru">Умственные действия</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Кезеңдеп қалыптастыру</span>
+            <span data-lang="ru">Поэтапное формирование</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            жаңа әрекет оқушыда бірден ішкі ақыл-ой әрекетіне айналмайды; ол сыртқы материалдық әрекеттен бастап, сөйлеу және ішкі жоспарға біртіндеп өтеді.
+          </span>
+          <span data-lang="ru">
+            новое действие не сразу становится внутренним умственным действием; оно постепенно проходит путь от внешнего материального действия к речи и внутреннему плану.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Ақыл-ой әрекеттерін кезеңдеп қалыптастыру</span>
+            <span data-lang="ru">Поэтапное формирование умственных действий</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Оқушыға жаңа әрекетті түсінікті бағдар, үлгі, жаттығу және біртіндеп ішкілендіру арқылы меңгертуге көмектеседі.</span>
+            <span data-lang="ru">Помогает организовать усвоение нового действия через ориентировку, образец, упражнение и постепенную интериоризацию.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Гальперин = әрекет сыртқыдан ішкіге өтеді.</span>
+          <span data-lang="ru">Запомнить: Гальперин = действие переходит от внешнего к внутреннему.</span>
+        </div>
+
+        <div class="test-box" data-answer="c">
+          <div class="test-question">
+            <span data-lang="kk">Гальперин теориясының негізгі мазмұны қай тұжырымға сәйкес келеді?</span>
+            <span data-lang="ru">Какое положение соответствует основной идее теории Гальперина?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-galperin" value="a">
+              <span data-lang="kk">Тұлға ұжымдық талап пен қоғамдық жауапкершілік арқылы қалыптасады</span>
+              <span data-lang="ru">Личность формируется через коллективное требование и общественную ответственность</span>
+            </label>
+            <label class="option"><input type="radio" name="q-galperin" value="b">
+              <span data-lang="kk">Бала ойлауы жас кезеңдері бойынша дамиды</span>
+              <span data-lang="ru">Мышление ребёнка развивается по возрастным стадиям</span>
+            </label>
+            <label class="option"><input type="radio" name="q-galperin" value="c">
+              <span data-lang="kk">Ақыл-ой әрекеті сыртқы әрекеттен ішкі жоспарға кезеңдеп өтеді</span>
+              <span data-lang="ru">Умственное действие поэтапно переходит от внешнего действия к внутреннему плану</span>
+            </label>
+            <label class="option"><input type="radio" name="q-galperin" value="d">
+              <span data-lang="kk">Оқушы дайындалған ортада еркін таңдау арқылы дамиды</span>
+              <span data-lang="ru">Ученик развивается через свободный выбор в подготовленной среде</span>
+            </label>
+            <label class="option"><input type="radio" name="q-galperin" value="e">
+              <span data-lang="kk">Оқыту халықтық дәстүр мен ана тіліне сүйенеді</span>
+              <span data-lang="ru">Обучение опирается на народные традиции и родной язык</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 17. Занков -->
+      <article class="scientist-card" data-category="development didactics school" data-keywords="занков zankov леонид владимирович дамыта оқыту развивающее обучение высокий уровень трудности ведущая роль теоретических знаний">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">Л.В. Занков</h3>
+            <div class="scientist-years">1901–1977</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Дамыта оқыту</span>
+            <span data-lang="ru">Развивающее обучение</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Жоғары қиындық деңгейі</span>
+            <span data-lang="ru">Высокий уровень трудности</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            оқыту баланың жалпы дамуын алға жылжытуы тиіс; оқу материалы жоғары қиындық деңгейінде, бірақ оқушыға түсінікті жолмен беріледі.
+          </span>
+          <span data-lang="ru">
+            обучение должно продвигать общее развитие ребёнка; учебный материал даётся на высоком уровне трудности, но в доступной для ученика форме.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Жалпы дамуға бағытталған оқыту</span>
+            <span data-lang="ru">Обучение, направленное на общее развитие</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Оқу процесінде оқушының ойлауын, байқағыштығын, дербестігін және танымдық белсенділігін дамытуға басымдық береді.</span>
+            <span data-lang="ru">Подчёркивает развитие мышления, наблюдательности, самостоятельности и познавательной активности ученика.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Занков = жоғары қиындық + жалпы даму.</span>
+          <span data-lang="ru">Запомнить: Занков = высокий уровень трудности + общее развитие.</span>
+        </div>
+
+        <div class="test-box" data-answer="d">
+          <div class="test-question">
+            <span data-lang="kk">Занков жүйесіндегі оқыту қандай мақсатқа бағытталады?</span>
+            <span data-lang="ru">На какую цель направлено обучение в системе Занкова?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-zankov" value="a">
+              <span data-lang="kk">Әрекетті сыртқы материалдық формада тоқтату</span>
+              <span data-lang="ru">Остановить действие на внешней материальной форме</span>
+            </label>
+            <label class="option"><input type="radio" name="q-zankov" value="b">
+              <span data-lang="kk">Баланы ұжымдық талапқа толық бағындыру</span>
+              <span data-lang="ru">Полностью подчинить ребёнка коллективному требованию</span>
+            </label>
+            <label class="option"><input type="radio" name="q-zankov" value="c">
+              <span data-lang="kk">Білімді дайын күйінде есте сақтауды күшейту</span>
+              <span data-lang="ru">Усилить запоминание готового знания</span>
+            </label>
+            <label class="option"><input type="radio" name="q-zankov" value="d">
+              <span data-lang="kk">Оқушының жалпы дамуын алға жылжыту</span>
+              <span data-lang="ru">Продвинуть общее развитие ученика</span>
+            </label>
+            <label class="option"><input type="radio" name="q-zankov" value="e">
+              <span data-lang="kk">Мектепті әкімшілік басқару құрылымын өзгерту</span>
+              <span data-lang="ru">Изменить структуру административного управления школой</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 18. Бабанский -->
+      <article class="scientist-card" data-category="didactics school" data-keywords="бабанский babanskiy юрий константинович оптимизация обучения оқытуды оңтайландыру методы обучения эффективность оқу процесі">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">Ю.К. Бабанский</h3>
+            <div class="scientist-years">1927–1987</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Оқытуды оңтайландыру</span>
+            <span data-lang="ru">Оптимизация обучения</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Дидактикалық әдістер</span>
+            <span data-lang="ru">Дидактические методы</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            оқу процесін мақсатқа, мазмұнға, оқушы мүмкіндігіне және нақты жағдайға сай тиімді ұйымдастыру қажет.
+          </span>
+          <span data-lang="ru">
+            учебный процесс нужно организовывать эффективно с учётом цели, содержания, возможностей ученика и конкретных условий.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Оқыту процесін оңтайландыру</span>
+            <span data-lang="ru">Оптимизация процесса обучения</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Мұғалім әдістерді, формаларды және құралдарды жағдайға қарай негізді таңдауы керек екенін көрсетті.</span>
+            <span data-lang="ru">Показал необходимость обоснованного выбора методов, форм и средств обучения по ситуации.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Бабанский = оқытуды тиімді ұйымдастыру.</span>
+          <span data-lang="ru">Запомнить: Бабанский = эффективная организация обучения.</span>
+        </div>
+
+        <div class="test-box" data-answer="a">
+          <div class="test-question">
+            <span data-lang="kk">Бабанскийдің дидактикадағы негізгі бағыты қайсы?</span>
+            <span data-lang="ru">Какое направление является главным в дидактике Бабанского?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-babansky" value="a">
+              <span data-lang="kk">Оқыту процесін нақты жағдайға сай оңтайландыру</span>
+              <span data-lang="ru">Оптимизация процесса обучения с учётом конкретных условий</span>
+            </label>
+            <label class="option"><input type="radio" name="q-babansky" value="b">
+              <span data-lang="kk">Бала дамуын когнитивтік кезеңдермен сипаттау</span>
+              <span data-lang="ru">Описание развития ребёнка через когнитивные стадии</span>
+            </label>
+            <label class="option"><input type="radio" name="q-babansky" value="c">
+              <span data-lang="kk">Ұжымдық тәрбие жүйесін өндірістік еңбекпен байланыстыру</span>
+              <span data-lang="ru">Связь коллективного воспитания с производственным трудом</span>
+            </label>
+            <label class="option"><input type="radio" name="q-babansky" value="d">
+              <span data-lang="kk">Баланың дайындалған ортадағы өзіндік дамуын қолдау</span>
+              <span data-lang="ru">Поддержка саморазвития ребёнка в подготовленной среде</span>
+            </label>
+            <label class="option"><input type="radio" name="q-babansky" value="e">
+              <span data-lang="kk">Тәрбиені халықтық мәдениетпен байланыстыру</span>
+              <span data-lang="ru">Связь воспитания с народной культурой</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 19. Скаткин -->
+      <article class="scientist-card" data-category="didactics school" data-keywords="скаткин skatkin михаил николаевич содержание образования методы обучения дидактика білім мазмұны оқыту әдістері">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">М.Н. Скаткин</h3>
+            <div class="scientist-years">1900–1991</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Білім мазмұны</span>
+            <span data-lang="ru">Содержание образования</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Оқыту әдістері</span>
+            <span data-lang="ru">Методы обучения</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            білім мазмұны, оқыту әдістері және оқу процесінің құрылымы оқушының саналы, жүйелі білім алуына бағытталуы керек.
+          </span>
+          <span data-lang="ru">
+            содержание образования, методы обучения и структура учебного процесса должны обеспечивать осознанное и системное усвоение знаний.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек сала</span>
+              <span data-lang="ru">Опорная область</span>
+            </b>
+            <span data-lang="kk">Дидактика және білім мазмұны</span>
+            <span data-lang="ru">Дидактика и содержание образования</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Оқу мазмұнын іріктеу, оқыту әдістерін жүйелеу және мектеп дидактикасын дамыту мәселелерімен байланысты.</span>
+            <span data-lang="ru">Связан с отбором содержания обучения, систематизацией методов и развитием школьной дидактики.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Скаткин = дидактика + білім мазмұны + әдістер.</span>
+          <span data-lang="ru">Запомнить: Скаткин = дидактика + содержание образования + методы.</span>
+        </div>
+
+        <div class="test-box" data-answer="e">
+          <div class="test-question">
+            <span data-lang="kk">Скаткин еңбектері көбіне қай педагогикалық салаға қатысты?</span>
+            <span data-lang="ru">К какой педагогической области чаще всего относятся работы Скаткина?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-skatkin" value="a">
+              <span data-lang="kk">Отбасындағы ата-ана беделін жіктеу</span>
+              <span data-lang="ru">Классификация родительского авторитета в семье</span>
+            </label>
+            <label class="option"><input type="radio" name="q-skatkin" value="b">
+              <span data-lang="kk">Мектеп ұйымының қаржылық менеджменті</span>
+              <span data-lang="ru">Финансовый менеджмент школьной организации</span>
+            </label>
+            <label class="option"><input type="radio" name="q-skatkin" value="c">
+              <span data-lang="kk">Жас ерекшелік дағдарыстарының клиникалық талдауы</span>
+              <span data-lang="ru">Клинический анализ возрастных кризисов</span>
+            </label>
+            <label class="option"><input type="radio" name="q-skatkin" value="d">
+              <span data-lang="kk">Еркін табиғи тәрбиенің философиялық негіздері</span>
+              <span data-lang="ru">Философские основы свободного естественного воспитания</span>
+            </label>
+            <label class="option"><input type="radio" name="q-skatkin" value="e">
+              <span data-lang="kk">Дидактика, білім мазмұны және оқыту әдістері</span>
+              <span data-lang="ru">Дидактика, содержание образования и методы обучения</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 20. Лернер -->
+      <article class="scientist-card" data-category="didactics school" data-keywords="лернер lerner исаак яковлевич содержание образования проблемное обучение шығармашылық тәжірибе опыт творческой деятельности оқыту әдістері">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">И.Я. Лернер</h3>
+            <div class="scientist-years">1917–1996</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Проблемалық оқыту</span>
+            <span data-lang="ru">Проблемное обучение</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Шығармашылық тәжірибе</span>
+            <span data-lang="ru">Опыт творческой деятельности</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            білім мазмұны оқушыға дайын ақпарат қана емес, әрекет тәсілдерін, шығармашылық тәжірибені және құндылық қатынасты да меңгертуі тиіс.
+          </span>
+          <span data-lang="ru">
+            содержание образования должно включать не только готовую информацию, но и способы деятельности, опыт творчества и ценностные отношения.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Білім мазмұнының құрамдары</span>
+            <span data-lang="ru">Компоненты содержания образования</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Оқушының шығармашылық ойлауын, проблеманы шешуін және танымдық дербестігін дамытуға бағытталған.</span>
+            <span data-lang="ru">Направлен на развитие творческого мышления, решения проблем и познавательной самостоятельности ученика.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Лернер = білім мазмұны + шығармашылық тәжірибе.</span>
+          <span data-lang="ru">Запомнить: Лернер = содержание образования + опыт творчества.</span>
+        </div>
+
+        <div class="test-box" data-answer="b">
+          <div class="test-question">
+            <span data-lang="kk">Лернер білім мазмұнында қай құрамды ерекше маңызды деп қарастырды?</span>
+            <span data-lang="ru">Какой компонент содержания образования Лернер считал особенно значимым?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-lerner" value="a">
+              <span data-lang="kk">Ұжымдық талапты әкімшілік бақылаумен күшейту</span>
+              <span data-lang="ru">Усиление коллективного требования административным контролем</span>
+            </label>
+            <label class="option"><input type="radio" name="q-lerner" value="b">
+              <span data-lang="kk">Шығармашылық әрекет тәжірибесін қалыптастыру</span>
+              <span data-lang="ru">Формирование опыта творческой деятельности</span>
+            </label>
+            <label class="option"><input type="radio" name="q-lerner" value="c">
+              <span data-lang="kk">Баланың табиғи дамуын бақылаусыз қалдыру</span>
+              <span data-lang="ru">Оставление естественного развития ребёнка без контроля</span>
+            </label>
+            <label class="option"><input type="radio" name="q-lerner" value="d">
+              <span data-lang="kk">Оқу әрекетін материалдық формада тоқтату</span>
+              <span data-lang="ru">Фиксация учебного действия в материальной форме</span>
+            </label>
+            <label class="option"><input type="radio" name="q-lerner" value="e">
+              <span data-lang="kk">Жас кезеңдерін биологиялық жетілу арқылы түсіндіру</span>
+              <span data-lang="ru">Объяснение возрастных периодов через биологическое созревание</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+            <!-- 21. Амонашвили -->
+      <article class="scientist-card" data-category="education humanistic school" data-keywords="амонашвили amonashvili шалва александрович гуманная педагогика ізгілік педагогикасы тұлғалық қатынас балаға сенім сотрудничество">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">Ш.А. Амонашвили</h3>
+            <div class="scientist-years">1931–</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Ізгілік педагогикасы</span>
+            <span data-lang="ru">Гуманная педагогика</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Балаға сенім</span>
+            <span data-lang="ru">Доверие к ребёнку</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            білім беру балаға сенім, сүйіспеншілік, құрмет және ынтымақтастық арқылы ұйымдастырылуы тиіс. Мұғалім баланың ішкі мүмкіндігін ашуға жағдай жасайды.
+          </span>
+          <span data-lang="ru">
+            образование должно строиться на доверии, любви, уважении и сотрудничестве. Учитель создаёт условия для раскрытия внутренних возможностей ребёнка.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Ізгілік-тұлғалық қатынас</span>
+            <span data-lang="ru">Гуманно-личностный подход</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Мұғалім мен оқушы арасындағы қарым-қатынасты қысымға емес, сенімге, қолдауға және ынтымақтастыққа негіздейді.</span>
+            <span data-lang="ru">Строит отношения учителя и ученика не на давлении, а на доверии, поддержке и сотрудничестве.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Амонашвили = ізгілік + сенім + ынтымақтастық.</span>
+          <span data-lang="ru">Запомнить: Амонашвили = гуманность + доверие + сотрудничество.</span>
+        </div>
+
+        <div class="test-box" data-answer="c">
+          <div class="test-question">
+            <span data-lang="kk">Амонашвили педагогикасының негізгі бағыты қайсы?</span>
+            <span data-lang="ru">Какое направление является основным в педагогике Амонашвили?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-amonashvili" value="a">
+              <span data-lang="kk">Оқыту процесін нақты жағдай бойынша оңтайландыру</span>
+              <span data-lang="ru">Оптимизация обучения по конкретным условиям</span>
+            </label>
+            <label class="option"><input type="radio" name="q-amonashvili" value="b">
+              <span data-lang="kk">Ақыл-ой әрекетін сыртқыдан ішкіге көшіру</span>
+              <span data-lang="ru">Перевод умственного действия от внешнего к внутреннему</span>
+            </label>
+            <label class="option"><input type="radio" name="q-amonashvili" value="c">
+              <span data-lang="kk">Балаға сенім мен құрметке негізделген ізгілік педагогикасы</span>
+              <span data-lang="ru">Гуманная педагогика, основанная на доверии и уважении к ребёнку</span>
+            </label>
+            <label class="option"><input type="radio" name="q-amonashvili" value="d">
+              <span data-lang="kk">Когнитивтік дамуды жас кезеңдерімен сипаттау</span>
+              <span data-lang="ru">Описание когнитивного развития через возрастные стадии</span>
+            </label>
+            <label class="option"><input type="radio" name="q-amonashvili" value="e">
+              <span data-lang="kk">Сынып-сабақ жүйесінің дидактикалық құрылымы</span>
+              <span data-lang="ru">Дидактическая структура классно-урочной системы</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 22. Божович -->
+      <article class="scientist-card" data-category="development education" data-keywords="божович bozhovich лидия ильинична тұлға мотивация личность мотивационная сфера школьник мотивы учения ішкі позиция оқушының ішкі позициясы">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">Л.И. Божович</h3>
+            <div class="scientist-years">1908–1981</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Тұлға дамуы</span>
+            <span data-lang="ru">Развитие личности</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Оқу мотивациясы</span>
+            <span data-lang="ru">Учебная мотивация</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            баланың тұлғалық дамуы оның қажеттіліктері, мотивтері, оқу әрекетіне қатынасы және мектеп оқушысының ішкі позициясы арқылы түсіндіріледі.
+          </span>
+          <span data-lang="ru">
+            личностное развитие ребёнка объясняется через потребности, мотивы, отношение к учению и внутреннюю позицию школьника.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Мотивациялық сала</span>
+            <span data-lang="ru">Мотивационная сфера</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Оқушының оқуына әсер ететін ішкі мотивтерді, қызығушылықты және тұлғалық қатынасты ескеруге мүмкіндік береді.</span>
+            <span data-lang="ru">Помогает учитывать внутренние мотивы, интерес и личностное отношение ученика к учению.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Божович = тұлға + мотив + оқушының ішкі позициясы.</span>
+          <span data-lang="ru">Запомнить: Божович = личность + мотив + внутренняя позиция школьника.</span>
+        </div>
+
+        <div class="test-box" data-answer="e">
+          <div class="test-question">
+            <span data-lang="kk">Божович зерттеулерінде оқушы тұлғасын түсіндіруде қандай фактор маңызды?</span>
+            <span data-lang="ru">Какой фактор важен для понимания личности ученика в исследованиях Божович?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-bozhovich" value="a">
+              <span data-lang="kk">Сынып-сабақ жүйесінің сыртқы ұйымдасуы</span>
+              <span data-lang="ru">Внешняя организация классно-урочной системы</span>
+            </label>
+            <label class="option"><input type="radio" name="q-bozhovich" value="b">
+              <span data-lang="kk">Ұжымдық еңбек пен қоғамдық талаптың құрылымы</span>
+              <span data-lang="ru">Структура коллективного труда и общественного требования</span>
+            </label>
+            <label class="option"><input type="radio" name="q-bozhovich" value="c">
+              <span data-lang="kk">Табиғи еркін дамудың сыртқы жағдайлары</span>
+              <span data-lang="ru">Внешние условия естественного свободного развития</span>
+            </label>
+            <label class="option"><input type="radio" name="q-bozhovich" value="d">
+              <span data-lang="kk">Дайындалған ортадағы сенсорлық әрекеттер</span>
+              <span data-lang="ru">Сенсорные действия в подготовленной среде</span>
+            </label>
+            <label class="option"><input type="radio" name="q-bozhovich" value="e">
+              <span data-lang="kk">Мотивтер, қажеттіліктер және оқушының ішкі позициясы</span>
+              <span data-lang="ru">Мотивы, потребности и внутренняя позиция школьника</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 23. Рубинштейн -->
+      <article class="scientist-card" data-category="development didactics" data-keywords="рубинштейн rubinstein сергей леонидович сознание деятельность сана іс әрекет принцип единства сознания и деятельности психология педагогика">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">С.Л. Рубинштейн</h3>
+            <div class="scientist-years">1889–1960</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Сана және іс-әрекет</span>
+            <span data-lang="ru">Сознание и деятельность</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Психология негіздері</span>
+            <span data-lang="ru">Основы психологии</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            сана мен іс-әрекет бірлікте қарастырылады: адам сыртқы әрекет арқылы әлемді өзгертеді және сол әрекет барысында өзі де дамиды.
+          </span>
+          <span data-lang="ru">
+            сознание и деятельность рассматриваются в единстве: человек через внешнюю деятельность изменяет мир и в этом процессе развивается сам.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек қағида</span>
+              <span data-lang="ru">Опорный принцип</span>
+            </b>
+            <span data-lang="kk">Сана мен іс-әрекет бірлігі</span>
+            <span data-lang="ru">Единство сознания и деятельности</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Оқушының дамуын оның белсенді әрекеті, танымы және тұлғалық қалыптасуымен байланысты түсіндіруге негіз болады.</span>
+            <span data-lang="ru">Даёт основу для понимания развития ученика через активную деятельность, познание и личностное становление.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Рубинштейн = сана мен іс-әрекет бірлігі.</span>
+          <span data-lang="ru">Запомнить: Рубинштейн = единство сознания и деятельности.</span>
+        </div>
+
+        <div class="test-box" data-answer="a">
+          <div class="test-question">
+            <span data-lang="kk">Рубинштейн еңбектеріндегі маңызды психологиялық қағида қайсы?</span>
+            <span data-lang="ru">Какой психологический принцип важен в работах Рубинштейна?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-rubinstein" value="a">
+              <span data-lang="kk">Сана мен іс-әрекет бірлігі</span>
+              <span data-lang="ru">Единство сознания и деятельности</span>
+            </label>
+            <label class="option"><input type="radio" name="q-rubinstein" value="b">
+              <span data-lang="kk">Бала дамуының когнитивтік кезеңдері</span>
+              <span data-lang="ru">Когнитивные стадии развития ребёнка</span>
+            </label>
+            <label class="option"><input type="radio" name="q-rubinstein" value="c">
+              <span data-lang="kk">Тәрбиенің халықтық сипаты</span>
+              <span data-lang="ru">Народность воспитания</span>
+            </label>
+            <label class="option"><input type="radio" name="q-rubinstein" value="d">
+              <span data-lang="kk">Ұжым арқылы тәрбиелеу жүйесі</span>
+              <span data-lang="ru">Система воспитания через коллектив</span>
+            </label>
+            <label class="option"><input type="radio" name="q-rubinstein" value="e">
+              <span data-lang="kk">Дайындалған ортадағы өзіндік даму</span>
+              <span data-lang="ru">Саморазвитие в подготовленной среде</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 24. Щукина -->
+      <article class="scientist-card" data-category="didactics education school" data-keywords="щукина shchukina галина ивановна познавательный интерес танымдық қызығушылық активизация учебной деятельности оқушы белсенділігі">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">Г.И. Щукина</h3>
+            <div class="scientist-years">1908–1994</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Танымдық қызығушылық</span>
+            <span data-lang="ru">Познавательный интерес</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Оқу белсенділігі</span>
+            <span data-lang="ru">Учебная активность</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            оқушының танымдық қызығушылығы оқу әрекетін белсенді ететін маңызды ішкі қозғаушы күш болып табылады.
+          </span>
+          <span data-lang="ru">
+            познавательный интерес ученика является важной внутренней движущей силой учебной деятельности.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Танымдық қызығушылық</span>
+            <span data-lang="ru">Познавательный интерес</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Сабақта қызығушылық тудыру, проблемалық жағдай жасау және оқушының белсенді қатысуын күшейту маңызды екенін көрсетеді.</span>
+            <span data-lang="ru">Показывает важность интереса, проблемных ситуаций и активного участия ученика на уроке.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Щукина = танымдық қызығушылық + оқу белсенділігі.</span>
+          <span data-lang="ru">Запомнить: Щукина = познавательный интерес + учебная активность.</span>
+        </div>
+
+        <div class="test-box" data-answer="d">
+          <div class="test-question">
+            <span data-lang="kk">Щукина зерттеулерінде оқу әрекетін белсенді ететін негізгі фактор ретінде не қарастырылады?</span>
+            <span data-lang="ru">Что рассматривается как основной фактор активизации учебной деятельности в исследованиях Щукиной?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-shchukina" value="a">
+              <span data-lang="kk">Сынып-сабақ жүйесінің күнтізбелік құрылымы</span>
+              <span data-lang="ru">Календарная структура классно-урочной системы</span>
+            </label>
+            <label class="option"><input type="radio" name="q-shchukina" value="b">
+              <span data-lang="kk">Ұжымдық жауапкершілік пен еңбек тәртібі</span>
+              <span data-lang="ru">Коллективная ответственность и трудовая дисциплина</span>
+            </label>
+            <label class="option"><input type="radio" name="q-shchukina" value="c">
+              <span data-lang="kk">Ақыл-ой әрекетін кезеңдеп ішкілендіру</span>
+              <span data-lang="ru">Поэтапная интериоризация умственного действия</span>
+            </label>
+            <label class="option"><input type="radio" name="q-shchukina" value="d">
+              <span data-lang="kk">Оқушының танымдық қызығушылығы</span>
+              <span data-lang="ru">Познавательный интерес ученика</span>
+            </label>
+            <label class="option"><input type="radio" name="q-shchukina" value="e">
+              <span data-lang="kk">Бала ойлауының когнитивтік сатылары</span>
+              <span data-lang="ru">Когнитивные стадии мышления ребёнка</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+            <!-- 25. Крупская -->
+      <article class="scientist-card" data-category="education school" data-keywords="крупская krupskaya надежда константиновна политехническое образование мектеп тәрбие балалар ұйымы қоғамдық тәрбие">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">Н.К. Крупская</h3>
+            <div class="scientist-years">1869–1939</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Қоғамдық тәрбие</span>
+            <span data-lang="ru">Общественное воспитание</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Политехникалық білім</span>
+            <span data-lang="ru">Политехническое образование</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            мектеп, еңбек, қоғамдық өмір және балалар ұйымдары тәрбиенің маңызды кеңістігі ретінде қарастырылады.
+          </span>
+          <span data-lang="ru">
+            школа, труд, общественная жизнь и детские организации рассматриваются как важное пространство воспитания.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Мектеп пен қоғамдық тәрбиенің байланысы</span>
+            <span data-lang="ru">Связь школы и общественного воспитания</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Оқушыны әлеуметтік өмірге, еңбекке, қоғамдық белсенділікке дайындау мәселелерін көтерді.</span>
+            <span data-lang="ru">Поднимала вопросы подготовки ученика к социальной жизни, труду и общественной активности.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Крупская = мектеп + қоғам + еңбек тәрбиесі.</span>
+          <span data-lang="ru">Запомнить: Крупская = школа + общество + трудовое воспитание.</span>
+        </div>
+
+        <div class="test-box" data-answer="b">
+          <div class="test-question">
+            <span data-lang="kk">Крупская көзқарасында тәрбие қандай кеңістікпен тығыз байланысты?</span>
+            <span data-lang="ru">С каким пространством тесно связано воспитание во взглядах Крупской?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-krupskaya" value="a">
+              <span data-lang="kk">Когнитивтік операциялардың жас кезеңдерімен</span>
+              <span data-lang="ru">С возрастными стадиями когнитивных операций</span>
+            </label>
+            <label class="option"><input type="radio" name="q-krupskaya" value="b">
+              <span data-lang="kk">Мектеп, еңбек және қоғамдық өмірмен</span>
+              <span data-lang="ru">Со школой, трудом и общественной жизнью</span>
+            </label>
+            <label class="option"><input type="radio" name="q-krupskaya" value="c">
+              <span data-lang="kk">Дайындалған ортадағы сенсорлық материалдармен</span>
+              <span data-lang="ru">С сенсорными материалами подготовленной среды</span>
+            </label>
+            <label class="option"><input type="radio" name="q-krupskaya" value="d">
+              <span data-lang="kk">Ішкі ақыл-ой әрекетін кезеңдеп қалыптастырумен</span>
+              <span data-lang="ru">С поэтапным формированием умственного действия</span>
+            </label>
+            <label class="option"><input type="radio" name="q-krupskaya" value="e">
+              <span data-lang="kk">Танымдық қызығушылықты проблемалық жағдаймен арттырумен</span>
+              <span data-lang="ru">С развитием познавательного интереса через проблемную ситуацию</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 26. Толстой -->
+      <article class="scientist-card" data-category="education humanistic school" data-keywords="толстой lev tolstoy лев николаевич ясная поляна еркін мектеп свободная школа свободное воспитание бала еркіндігі">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">Л.Н. Толстой</h3>
+            <div class="scientist-years">1828–1910</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Еркін мектеп</span>
+            <span data-lang="ru">Свободная школа</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Гуманистік тәрбие</span>
+            <span data-lang="ru">Гуманистическое воспитание</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            оқыту баланың еркіндігіне, қызығушылығына, табиғи белсенділігіне және мұғалім мен оқушы арасындағы адамгершілік қатынасқа сүйенуі керек.
+          </span>
+          <span data-lang="ru">
+            обучение должно опираться на свободу ребёнка, интерес, естественную активность и нравственные отношения между учителем и учеником.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек тәжірибе</span>
+              <span data-lang="ru">Опорный опыт</span>
+            </b>
+            <span data-lang="kk">Ясная Поляна мектебі</span>
+            <span data-lang="ru">Яснополянская школа</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Мектепте мәжбүрлеуді азайтып, баланың қызығушылығы мен еркін танымдық әрекетін қолдауды көрсетті.</span>
+            <span data-lang="ru">Показывал необходимость уменьшения принуждения и поддержки интереса и свободной познавательной активности ребёнка.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Толстой = еркін мектеп + қызығушылық + адамгершілік қатынас.</span>
+          <span data-lang="ru">Запомнить: Толстой = свободная школа + интерес + нравственные отношения.</span>
+        </div>
+
+        <div class="test-box" data-answer="d">
+          <div class="test-question">
+            <span data-lang="kk">Толстой педагогикалық тәжірибесінде қандай идея айқын көрінеді?</span>
+            <span data-lang="ru">Какая идея ярко выражена в педагогическом опыте Толстого?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-tolstoy" value="a">
+              <span data-lang="kk">Оқыту процесін басқару шешімдері арқылы оңтайландыру</span>
+              <span data-lang="ru">Оптимизация обучения через управленческие решения</span>
+            </label>
+            <label class="option"><input type="radio" name="q-tolstoy" value="b">
+              <span data-lang="kk">Ұжымдық тәртіп пен қоғамдық жауапкершілікті күшейту</span>
+              <span data-lang="ru">Усиление коллективной дисциплины и общественной ответственности</span>
+            </label>
+            <label class="option"><input type="radio" name="q-tolstoy" value="c">
+              <span data-lang="kk">Баланың когнитивтік дамуын кезеңдерге бөлу</span>
+              <span data-lang="ru">Разделение когнитивного развития ребёнка на стадии</span>
+            </label>
+            <label class="option"><input type="radio" name="q-tolstoy" value="d">
+              <span data-lang="kk">Баланың еркіндігі мен қызығушылығына сүйенетін мектеп</span>
+              <span data-lang="ru">Школа, опирающаяся на свободу и интерес ребёнка</span>
+            </label>
+            <label class="option"><input type="radio" name="q-tolstoy" value="e">
+              <span data-lang="kk">Ақыл-ой әрекетін ішкі жоспарға кезеңдеп көшіру</span>
+              <span data-lang="ru">Поэтапный перевод умственного действия во внутренний план</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 27. Корчак -->
+      <article class="scientist-card" data-category="education humanistic" data-keywords="корчак korczak януш бала құқығы права ребенка гуманистік тәрбие уважение к ребенку детское самоуправление">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">Я. Корчак</h3>
+            <div class="scientist-years">1878–1942</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Бала құқығы</span>
+            <span data-lang="ru">Права ребёнка</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Құрмет педагогикасы</span>
+            <span data-lang="ru">Педагогика уважения</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            бала толыққанды тұлға ретінде құрметтелуі керек; тәрбие баланың құқығын, қадірін, дауысын және өзіндік өмірін мойындауға негізделеді.
+          </span>
+          <span data-lang="ru">
+            ребёнок должен уважаться как полноценная личность; воспитание основано на признании прав, достоинства, голоса и собственной жизни ребёнка.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Балаға құрмет және бала құқығы</span>
+            <span data-lang="ru">Уважение к ребёнку и права ребёнка</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Тәрбиеде баланың пікірін, дербестігін, жауапкершілігін және өзін-өзі басқаруын дамытуға мән берді.</span>
+            <span data-lang="ru">Подчёркивал значение мнения ребёнка, самостоятельности, ответственности и детского самоуправления.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Корчак = бала құқығы + құрмет + өзін-өзі басқару.</span>
+          <span data-lang="ru">Запомнить: Корчак = права ребёнка + уважение + самоуправление.</span>
+        </div>
+
+        <div class="test-box" data-answer="a">
+          <div class="test-question">
+            <span data-lang="kk">Корчак педагогикасында басты орын алатын қағида қайсы?</span>
+            <span data-lang="ru">Какой принцип занимает центральное место в педагогике Корчака?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-korczak" value="a">
+              <span data-lang="kk">Баланы құқықтары бар тұлға ретінде құрметтеу</span>
+              <span data-lang="ru">Уважение ребёнка как личности, имеющей права</span>
+            </label>
+            <label class="option"><input type="radio" name="q-korczak" value="b">
+              <span data-lang="kk">Оқытуды жоғары қиындық деңгейінде ұйымдастыру</span>
+              <span data-lang="ru">Организация обучения на высоком уровне трудности</span>
+            </label>
+            <label class="option"><input type="radio" name="q-korczak" value="c">
+              <span data-lang="kk">Білім мазмұнын ғылыми әдістер бойынша іріктеу</span>
+              <span data-lang="ru">Отбор содержания образования по научным методам</span>
+            </label>
+            <label class="option"><input type="radio" name="q-korczak" value="d">
+              <span data-lang="kk">Мектепті қоғамдық еңбекпен байланыстыру</span>
+              <span data-lang="ru">Связь школы с общественным трудом</span>
+            </label>
+            <label class="option"><input type="radio" name="q-korczak" value="e">
+              <span data-lang="kk">Әрекетті сыртқыдан ішкіге кезеңдеп өткізу</span>
+              <span data-lang="ru">Поэтапный перевод действия от внешнего к внутреннему</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 28. Френе -->
+      <article class="scientist-card" data-category="didactics humanistic school" data-keywords="френе freinet селестен френе свободный текст школьная типография cooperative learning ынтымақтастық мектеп тәжірибелік оқыту">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">С. Френе</h3>
+            <div class="scientist-years">1896–1966</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Ынтымақтастық оқыту</span>
+            <span data-lang="ru">Кооперативное обучение</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Тәжірибелік педагогика</span>
+            <span data-lang="ru">Практическая педагогика</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            оқыту оқушының еркін мәтіні, тәжірибесі, еңбегі, қарым-қатынасы және сыныптағы ынтымақтастық арқылы ұйымдастырылады.
+          </span>
+          <span data-lang="ru">
+            обучение организуется через свободный текст ученика, опыт, труд, общение и сотрудничество в классе.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек тәсілдер</span>
+              <span data-lang="ru">Опорные приёмы</span>
+            </b>
+            <span data-lang="kk">Еркін мәтін, мектеп баспаханасы, ынтымақтастық</span>
+            <span data-lang="ru">Свободный текст, школьная типография, сотрудничество</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Сыныпты белсенді, шығармашылық, тәжірибеге жақын оқу қауымдастығы ретінде ұйымдастыруға ықпал етті.</span>
+            <span data-lang="ru">Способствовал организации класса как активного, творческого и практико-ориентированного сообщества.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Френе = еркін мәтін + тәжірибе + ынтымақтастық.</span>
+          <span data-lang="ru">Запомнить: Френе = свободный текст + опыт + сотрудничество.</span>
+        </div>
+
+        <div class="test-box" data-answer="e">
+          <div class="test-question">
+            <span data-lang="kk">Френе педагогикасына тән тәсіл қайсы?</span>
+            <span data-lang="ru">Какой приём характерен для педагогики Френе?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-freinet" value="a">
+              <span data-lang="kk">Когнитивтік даму кезеңдерін анықтау</span>
+              <span data-lang="ru">Определение стадий когнитивного развития</span>
+            </label>
+            <label class="option"><input type="radio" name="q-freinet" value="b">
+              <span data-lang="kk">Ұжымдық талапты тәртіп арқылы күшейту</span>
+              <span data-lang="ru">Усиление коллективного требования через дисциплину</span>
+            </label>
+            <label class="option"><input type="radio" name="q-freinet" value="c">
+              <span data-lang="kk">Жақын даму аймағын есепке алу</span>
+              <span data-lang="ru">Учёт зоны ближайшего развития</span>
+            </label>
+            <label class="option"><input type="radio" name="q-freinet" value="d">
+              <span data-lang="kk">Ақыл-ой әрекетін кезеңдеп қалыптастыру</span>
+              <span data-lang="ru">Поэтапное формирование умственных действий</span>
+            </label>
+            <label class="option"><input type="radio" name="q-freinet" value="e">
+              <span data-lang="kk">Еркін мәтін және сыныптағы ынтымақтастық жұмысы</span>
+              <span data-lang="ru">Свободный текст и сотрудничество в классе</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+            <!-- 29. Брунер -->
+      <article class="scientist-card" data-category="development didactics school" data-keywords="брунер bruner jerome джером когнитивная психология спиральная учебная программа discovery learning обучение через открытие спиральді оқу бағдарламасы">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">Дж. Брунер</h3>
+            <div class="scientist-years">1915–2016</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Когнитивтік оқыту</span>
+            <span data-lang="ru">Когнитивное обучение</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Спиральді бағдарлама</span>
+            <span data-lang="ru">Спиральная программа</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            оқушы білімді белсенді түрде ашады, құрастырады және бұрынғы біліммен байланыстырады. Оқу мазмұны жас ерекшелігіне сай қайта оралып, күрделене береді.
+          </span>
+          <span data-lang="ru">
+            ученик активно открывает, конструирует и связывает новое знание с прежним опытом. Учебное содержание может возвращаться на разных возрастных этапах, постепенно усложняясь.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Спиральді оқу бағдарламасы</span>
+            <span data-lang="ru">Спиральная учебная программа</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Тақырыпты бір рет қана емес, әр кезеңде тереңдетіп оқытуға және оқушының танымдық белсенділігін арттыруға негіз болады.</span>
+            <span data-lang="ru">Обосновывает возвращение к темам на новом уровне сложности и развитие познавательной активности ученика.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Брунер = ашу арқылы оқыту + спиральді бағдарлама.</span>
+          <span data-lang="ru">Запомнить: Брунер = обучение через открытие + спиральная программа.</span>
+        </div>
+
+        <div class="test-box" data-answer="c">
+          <div class="test-question">
+            <span data-lang="kk">Брунер теориясында оқу мазмұнын ұйымдастырудың маңызды идеясы қайсы?</span>
+            <span data-lang="ru">Какая идея важна для организации содержания обучения у Брунера?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-bruner" value="a">
+              <span data-lang="kk">Ұжымдық талап арқылы мінез-құлықты қалыптастыру</span>
+              <span data-lang="ru">Формирование поведения через коллективное требование</span>
+            </label>
+            <label class="option"><input type="radio" name="q-bruner" value="b">
+              <span data-lang="kk">Ақыл-ой әрекетін сыртқы формада бекіту</span>
+              <span data-lang="ru">Закрепление умственного действия во внешней форме</span>
+            </label>
+            <label class="option"><input type="radio" name="q-bruner" value="c">
+              <span data-lang="kk">Тақырыпқа қайта оралып, оны күрделендіре оқыту</span>
+              <span data-lang="ru">Возвращение к теме с постепенным усложнением</span>
+            </label>
+            <label class="option"><input type="radio" name="q-bruner" value="d">
+              <span data-lang="kk">Мектепті қоғамдық еңбекпен байланыстыру</span>
+              <span data-lang="ru">Связь школы с общественным трудом</span>
+            </label>
+            <label class="option"><input type="radio" name="q-bruner" value="e">
+              <span data-lang="kk">Баланы құқықтары бар тұлға ретінде қорғау</span>
+              <span data-lang="ru">Защита ребёнка как личности, имеющей права</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 30. Блум -->
+      <article class="scientist-card" data-category="didactics school" data-keywords="блум bloom benjamin бенджамин таксономия блум таксономиясы цели обучения оқу мақсаттары знание понимание применение анализ синтез оценка">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">Б. Блум</h3>
+            <div class="scientist-years">1913–1999</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Оқу мақсаттары</span>
+            <span data-lang="ru">Цели обучения</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Таксономия</span>
+            <span data-lang="ru">Таксономия</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            оқу мақсаттары танымдық деңгейлер бойынша жүйеленеді: білу, түсіну, қолдану, талдау, жинақтау және бағалау.
+          </span>
+          <span data-lang="ru">
+            учебные цели систематизируются по познавательным уровням: знание, понимание, применение, анализ, синтез и оценка.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Блум таксономиясы</span>
+            <span data-lang="ru">Таксономия Блума</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Сабақ мақсатын, тапсырма деңгейін және бағалау критерийлерін нақтылауға көмектеседі.</span>
+            <span data-lang="ru">Помогает конкретизировать цели урока, уровень заданий и критерии оценивания.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Блум = оқу мақсаттарының деңгейлері.</span>
+          <span data-lang="ru">Запомнить: Блум = уровни учебных целей.</span>
+        </div>
+
+        <div class="test-box" data-answer="a">
+          <div class="test-question">
+            <span data-lang="kk">Блум таксономиясы педагогикада не үшін қолданылады?</span>
+            <span data-lang="ru">Для чего используется таксономия Блума в педагогике?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-bloom" value="a">
+              <span data-lang="kk">Оқу мақсаттарын танымдық деңгейлер бойынша жүйелеу үшін</span>
+              <span data-lang="ru">Для систематизации учебных целей по познавательным уровням</span>
+            </label>
+            <label class="option"><input type="radio" name="q-bloom" value="b">
+              <span data-lang="kk">Жақын даму аймағын әлеуметтік көмекпен түсіндіру үшін</span>
+              <span data-lang="ru">Для объяснения зоны ближайшего развития через социальную помощь</span>
+            </label>
+            <label class="option"><input type="radio" name="q-bloom" value="c">
+              <span data-lang="kk">Баланың табиғи еркіндігін тәрбие негізі ету үшін</span>
+              <span data-lang="ru">Для обоснования естественной свободы ребёнка как основы воспитания</span>
+            </label>
+            <label class="option"><input type="radio" name="q-bloom" value="d">
+              <span data-lang="kk">Ұжымдық тәрбиені қоғамдық еңбекпен байланыстыру үшін</span>
+              <span data-lang="ru">Для связи коллективного воспитания с общественным трудом</span>
+            </label>
+            <label class="option"><input type="radio" name="q-bloom" value="e">
+              <span data-lang="kk">Дайындалған ортада дербес дамуды ұйымдастыру үшін</span>
+              <span data-lang="ru">Для организации самостоятельного развития в подготовленной среде</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 31. Маслоу -->
+      <article class="scientist-card" data-category="development humanistic education" data-keywords="маслоу maslow abraham абрахам потребности қажеттіліктер иерархия потребностей өзін өзі жүзеге асыру самоактуализация гуманистік психология">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">А. Маслоу</h3>
+            <div class="scientist-years">1908–1970</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Қажеттіліктер иерархиясы</span>
+            <span data-lang="ru">Иерархия потребностей</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Өзін-өзі жүзеге асыру</span>
+            <span data-lang="ru">Самоактуализация</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            адам дамуы қажеттіліктер жүйесімен байланысты; қауіпсіздік, сүйіспеншілік, құрмет және өзін-өзі жүзеге асыру білім беру мотивациясына әсер етеді.
+          </span>
+          <span data-lang="ru">
+            развитие человека связано с системой потребностей; безопасность, любовь, уважение и самоактуализация влияют на учебную мотивацию.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Қажеттіліктер иерархиясы</span>
+            <span data-lang="ru">Иерархия потребностей</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Оқушының оқуына тек білім мазмұны емес, эмоционалдық қауіпсіздік, қолдау және тұлғалық өсу жағдайы да әсер ететінін көрсетеді.</span>
+            <span data-lang="ru">Показывает, что на учение влияет не только содержание, но и безопасность, поддержка и условия личностного роста.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Маслоу = қажеттілік + мотивация + өзін-өзі жүзеге асыру.</span>
+          <span data-lang="ru">Запомнить: Маслоу = потребности + мотивация + самоактуализация.</span>
+        </div>
+
+        <div class="test-box" data-answer="d">
+          <div class="test-question">
+            <span data-lang="kk">Маслоу теориясы педагогикада көбіне қандай мәселені түсіндіруге көмектеседі?</span>
+            <span data-lang="ru">Какую проблему теория Маслоу чаще всего помогает объяснить в педагогике?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-maslow" value="a">
+              <span data-lang="kk">Сынып-сабақ жүйесінің тарихи қалыптасуын</span>
+              <span data-lang="ru">Историческое становление классно-урочной системы</span>
+            </label>
+            <label class="option"><input type="radio" name="q-maslow" value="b">
+              <span data-lang="kk">Ақыл-ой әрекетін кезеңдеп қалыптастыру механизмін</span>
+              <span data-lang="ru">Механизм поэтапного формирования умственных действий</span>
+            </label>
+            <label class="option"><input type="radio" name="q-maslow" value="c">
+              <span data-lang="kk">Оқу мазмұнын ғылыми әдістер бойынша іріктеуді</span>
+              <span data-lang="ru">Отбор содержания обучения по научным методам</span>
+            </label>
+            <label class="option"><input type="radio" name="q-maslow" value="d">
+              <span data-lang="kk">Оқушы мотивациясының қажеттіліктермен байланысын</span>
+              <span data-lang="ru">Связь учебной мотивации с потребностями ученика</span>
+            </label>
+            <label class="option"><input type="radio" name="q-maslow" value="e">
+              <span data-lang="kk">Ұжым арқылы тәрбиелеудің ұйымдасуын</span>
+              <span data-lang="ru">Организацию воспитания через коллектив</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 32. Роджерс -->
+      <article class="scientist-card" data-category="humanistic development education" data-keywords="роджерс rogers carl карл гуманистическая психология тұлғаға бағытталған оқыту личностно ориентированное обучение эмпатия принятие фасилитация">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">К. Роджерс</h3>
+            <div class="scientist-years">1902–1987</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Тұлғаға бағытталған оқыту</span>
+            <span data-lang="ru">Личностно ориентированное обучение</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Эмпатия</span>
+            <span data-lang="ru">Эмпатия</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            білім беру тұлғаны қабылдау, сенім, эмпатия және еркін өзіндік даму жағдайында тиімді болады. Мұғалім білімді күштеп беруші емес, дамуды жеңілдетуші.
+          </span>
+          <span data-lang="ru">
+            образование эффективно в условиях принятия личности, доверия, эмпатии и свободного саморазвития. Учитель не навязывает знания, а облегчает развитие.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Фасилитация және тұлғаны қабылдау</span>
+            <span data-lang="ru">Фасилитация и принятие личности</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Оқушыны субъект ретінде қабылдауға, қолдаушы орта құруға және тұлғалық өсуге жағдай жасауға бағыттайды.</span>
+            <span data-lang="ru">Ориентирует на принятие ученика как субъекта, создание поддерживающей среды и условий личностного роста.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Роджерс = эмпатия + қабылдау + тұлғаға бағытталу.</span>
+          <span data-lang="ru">Запомнить: Роджерс = эмпатия + принятие + личностная направленность.</span>
+        </div>
+
+        <div class="test-box" data-answer="b">
+          <div class="test-question">
+            <span data-lang="kk">Роджерс көзқарасында мұғалімнің рөлі қалай сипатталады?</span>
+            <span data-lang="ru">Как характеризуется роль учителя во взглядах Роджерса?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-rogers" value="a">
+              <span data-lang="kk">Ұжымдық талапты күшейтетін әкімшілік бақылаушы</span>
+              <span data-lang="ru">Административный контролёр, усиливающий коллективное требование</span>
+            </label>
+            <label class="option"><input type="radio" name="q-rogers" value="b">
+              <span data-lang="kk">Тұлғалық дамуды қолдайтын фасилитатор</span>
+              <span data-lang="ru">Фасилитатор, поддерживающий личностное развитие</span>
+            </label>
+            <label class="option"><input type="radio" name="q-rogers" value="c">
+              <span data-lang="kk">Оқушы әрекетін сыртқы формада бекітетін нұсқаушы</span>
+              <span data-lang="ru">Инструктор, закрепляющий действие во внешней форме</span>
+            </label>
+            <label class="option"><input type="radio" name="q-rogers" value="d">
+              <span data-lang="kk">Сынып-сабақ құрылымын тарихи негіздеуші</span>
+              <span data-lang="ru">Исторический основатель классно-урочной структуры</span>
+            </label>
+            <label class="option"><input type="radio" name="q-rogers" value="e">
+              <span data-lang="kk">Когнитивтік кезеңдерді жас бойынша жіктеуші</span>
+              <span data-lang="ru">Исследователь возрастных когнитивных стадий</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+            <!-- 33.  Торндайк -->
+      <article class="scientist-card" data-category="development didactics" data-keywords="торндайк thorndike эдвард закон эффекта бихевиоризм научение стимул реакция жаттығу заңы эффект заңы">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">Э. Торндайк</h3>
+            <div class="scientist-years">1874–1949</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Үйрену психологиясы</span>
+            <span data-lang="ru">Психология научения</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Стимул және реакция</span>
+            <span data-lang="ru">Стимул и реакция</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            үйрену әрекет нәтижесімен байланысты қалыптасады; сәтті нәтиже әрекетті бекітеді, ал тиімсіз нәтиже оның қайталануын әлсіретеді.
+          </span>
+          <span data-lang="ru">
+            научение формируется через связь действия с результатом; успешный результат закрепляет действие, а неэффективный ослабляет его повторение.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Эффект заңы</span>
+            <span data-lang="ru">Закон эффекта</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Оқытуда жаттығу, бекіту, нәтиже және кері байланыстың маңызын түсіндіруге көмектеседі.</span>
+            <span data-lang="ru">Помогает объяснить значение упражнения, закрепления, результата и обратной связи в обучении.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Торндайк = нәтиже әрекетті бекітеді.</span>
+          <span data-lang="ru">Запомнить: Торндайк = результат закрепляет действие.</span>
+        </div>
+
+        <div class="test-box" data-answer="c">
+          <div class="test-question">
+            <span data-lang="kk">Торндайк теориясында әрекетті бекітетін негізгі шарт қандай?</span>
+            <span data-lang="ru">Какое условие закрепляет действие в теории Торндайка?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-thorndike" value="a">
+              <span data-lang="kk">Баланың ойлауын жас кезеңдері бойынша бөлу</span>
+              <span data-lang="ru">Деление мышления ребёнка по возрастным стадиям</span>
+            </label>
+            <label class="option"><input type="radio" name="q-thorndike" value="b">
+              <span data-lang="kk">Жақын даму аймағындағы әлеуметтік көмек</span>
+              <span data-lang="ru">Социальная помощь в зоне ближайшего развития</span>
+            </label>
+            <label class="option"><input type="radio" name="q-thorndike" value="c">
+              <span data-lang="kk">Әрекеттің сәтті нәтижемен байланысуы</span>
+              <span data-lang="ru">Связь действия с успешным результатом</span>
+            </label>
+            <label class="option"><input type="radio" name="q-thorndike" value="d">
+              <span data-lang="kk">Тәрбиенің халықтық дәстүрге сүйенуі</span>
+              <span data-lang="ru">Опора воспитания на народную традицию</span>
+            </label>
+            <label class="option"><input type="radio" name="q-thorndike" value="e">
+              <span data-lang="kk">Оқу мақсатын танымдық деңгейге бөлу</span>
+              <span data-lang="ru">Деление учебной цели по познавательным уровням</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 34. Скиннер -->
+      <article class="scientist-card" data-category="didactics development" data-keywords="скиннер skinner burrhus бихевиоризм программированное обучение reinforcement подкрепление оперантное научение бағдарламалап оқыту">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">Б.Ф. Скиннер</h3>
+            <div class="scientist-years">1904–1990</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Бағдарламалап оқыту</span>
+            <span data-lang="ru">Программированное обучение</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Бекіту</span>
+            <span data-lang="ru">Подкрепление</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            мінез-құлық бекіту арқылы қалыптасады; оқытуда материалды шағын қадамдарға бөліп, әр жауапқа дереу кері байланыс беру маңызды.
+          </span>
+          <span data-lang="ru">
+            поведение формируется через подкрепление; в обучении важно делить материал на малые шаги и давать немедленную обратную связь.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Бағдарламалап оқыту</span>
+            <span data-lang="ru">Программированное обучение</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Оқу материалын кезең-кезеңмен меңгерту, өзіндік тексеру және жедел кері байланыс идеяларымен байланысты.</span>
+            <span data-lang="ru">Связан с поэтапным усвоением материала, самопроверкой и немедленной обратной связью.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Скиннер = бекіту + шағын қадам + кері байланыс.</span>
+          <span data-lang="ru">Запомнить: Скиннер = подкрепление + малые шаги + обратная связь.</span>
+        </div>
+
+        <div class="test-box" data-answer="e">
+          <div class="test-question">
+            <span data-lang="kk">Скиннердің бағдарламалап оқыту идеясында қандай шарт маңызды?</span>
+            <span data-lang="ru">Какое условие важно в идее программированного обучения Скиннера?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-skinner" value="a">
+              <span data-lang="kk">Ұжымдық тәрбиені қоғамдық еңбекпен байланыстыру</span>
+              <span data-lang="ru">Связь коллективного воспитания с общественным трудом</span>
+            </label>
+            <label class="option"><input type="radio" name="q-skinner" value="b">
+              <span data-lang="kk">Бала табиғатына сәйкес еркін тәрбие беру</span>
+              <span data-lang="ru">Свободное воспитание согласно природе ребёнка</span>
+            </label>
+            <label class="option"><input type="radio" name="q-skinner" value="c">
+              <span data-lang="kk">Оқушының жетекші іс-әрекетін жас кезеңімен байланыстыру</span>
+              <span data-lang="ru">Связь ведущей деятельности ученика с возрастным периодом</span>
+            </label>
+            <label class="option"><input type="radio" name="q-skinner" value="d">
+              <span data-lang="kk">Тәрбиенің халықтық сипатын ана тілімен ұштастыру</span>
+              <span data-lang="ru">Соединение народности воспитания с родным языком</span>
+            </label>
+            <label class="option"><input type="radio" name="q-skinner" value="e">
+              <span data-lang="kk">Материалды шағын қадамдарға бөліп, жедел кері байланыс беру</span>
+              <span data-lang="ru">Деление материала на малые шаги и немедленная обратная связь</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+      <!-- 35. Бандура -->
+      <article class="scientist-card" data-category="development education" data-keywords="бандура bandura albert әлеуметтік үйрену социальное научение бақылау арқылы үйрену observational learning модель еліктеу self efficacy">
+        <div class="card-head">
+          <div>
+            <h3 class="scientist-name">А. Бандура</h3>
+            <div class="scientist-years">1925–2021</div>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">
+            <span data-lang="kk">Әлеуметтік үйрену</span>
+            <span data-lang="ru">Социальное научение</span>
+          </span>
+          <span class="tag">
+            <span data-lang="kk">Модельге еліктеу</span>
+            <span data-lang="ru">Подражание модели</span>
+          </span>
+        </div>
+
+        <div class="idea-box">
+          <strong>
+            <span data-lang="kk">Негізгі идея:</span>
+            <span data-lang="ru">Основная идея:</span>
+          </strong>
+          <span data-lang="kk">
+            адам басқалардың әрекетін бақылау, үлгі алу және әлеуметтік тәжірибе арқылы үйренеді.
+          </span>
+          <span data-lang="ru">
+            человек учится через наблюдение за действиями других, подражание модели и социальный опыт.
+          </span>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Тірек ұғым</span>
+              <span data-lang="ru">Опорное понятие</span>
+            </b>
+            <span data-lang="kk">Бақылау арқылы үйрену</span>
+            <span data-lang="ru">Научение через наблюдение</span>
+          </div>
+
+          <div class="mini">
+            <b>
+              <span data-lang="kk">Педагогикадағы мәні</span>
+              <span data-lang="ru">Значение в педагогике</span>
+            </b>
+            <span data-lang="kk">Мұғалімнің, ата-ананың, құрдастардың үлгісі оқушы мінез-құлқы мен оқу мотивациясына әсер ететінін түсіндіреді.</span>
+            <span data-lang="ru">Объясняет влияние примера учителя, родителей и сверстников на поведение и учебную мотивацию ученика.</span>
+          </div>
+        </div>
+
+        <div class="memory">
+          <span data-lang="kk">Есте сақтау: Бандура = бақылау + үлгі + еліктеу.</span>
+          <span data-lang="ru">Запомнить: Бандура = наблюдение + модель + подражание.</span>
+        </div>
+
+        <div class="test-box" data-answer="a">
+          <div class="test-question">
+            <span data-lang="kk">Бандура теориясында үйренудің маңызды механизмі қайсы?</span>
+            <span data-lang="ru">Какой механизм научения важен в теории Бандуры?</span>
+          </div>
+
+          <div class="options">
+            <label class="option"><input type="radio" name="q-bandura" value="a">
+              <span data-lang="kk">Басқалардың әрекетін бақылау және үлгі алу</span>
+              <span data-lang="ru">Наблюдение за действиями других и подражание модели</span>
+            </label>
+            <label class="option"><input type="radio" name="q-bandura" value="b">
+              <span data-lang="kk">Ақыл-ой әрекетін ішкі жоспарға кезеңдеп көшіру</span>
+              <span data-lang="ru">Поэтапный перевод умственного действия во внутренний план</span>
+            </label>
+            <label class="option"><input type="radio" name="q-bandura" value="c">
+              <span data-lang="kk">Оқу мақсаттарын танымдық деңгейге бөлу</span>
+              <span data-lang="ru">Деление учебных целей по познавательным уровням</span>
+            </label>
+            <label class="option"><input type="radio" name="q-bandura" value="d">
+              <span data-lang="kk">Оқыту мазмұнын спиральді ұйымдастыру</span>
+              <span data-lang="ru">Спиральная организация содержания обучения</span>
+            </label>
+            <label class="option"><input type="radio" name="q-bandura" value="e">
+              <span data-lang="kk">Тәрбиені халықтық дәстүр арқылы негіздеу</span>
+              <span data-lang="ru">Обоснование воспитания через народную традицию</span>
+            </label>
+          </div>
+
+          <button class="check-btn" onclick="checkCardAnswer(this)">
+            <span data-lang="kk">Жауапты тексеру</span>
+            <span data-lang="ru">Проверить ответ</span>
+          </button>
+
+          <div class="result"></div>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="section-title">
+      <h2>
+        <span data-lang="kk">Қысқаша қайталау</span>
+        <span data-lang="ru">Краткое повторение</span>
+      </h2>
+      <p>
+        <span data-lang="kk">Емтихан алдында ғалымдарды мына тірек сөздер арқылы жылдам қайталаңыз.</span>
+        <span data-lang="ru">Перед экзаменом быстро повторите учёных по этим опорным словам.</span>
+      </p>
+    </section>
+
+    <section class="toolbar">
+      <div class="mini-grid">
+        <div class="mini"><b>Выготский</b><span data-lang="kk">Жақын даму аймағы</span><span data-lang="ru">Зона ближайшего развития</span></div>
+        <div class="mini"><b>Пиаже</b><span data-lang="kk">Когнитивтік даму кезеңдері</span><span data-lang="ru">Стадии когнитивного развития</span></div>
+        <div class="mini"><b>Коменский</b><span data-lang="kk">Сынып-сабақ жүйесі, дидактика</span><span data-lang="ru">Классно-урочная система, дидактика</span></div>
+        <div class="mini"><b>Ушинский</b><span data-lang="kk">Халықтық тәрбие, ана тілі</span><span data-lang="ru">Народность воспитания, родной язык</span></div>
+        <div class="mini"><b>Макаренко</b><span data-lang="kk">Ұжым арқылы тәрбиелеу</span><span data-lang="ru">Воспитание через коллектив</span></div>
+        <div class="mini"><b>Сухомлинский</b><span data-lang="kk">Гуманизм, бала жүрегі</span><span data-lang="ru">Гуманизм, сердце ребёнка</span></div>
+        <div class="mini"><b>Песталоцци</b><span data-lang="kk">Ақыл — жүрек — қол</span><span data-lang="ru">Голова — сердце — рука</span></div>
+        <div class="mini"><b>Дистервег</b><span data-lang="kk">Дамытушы оқыту, дербестік</span><span data-lang="ru">Развивающее обучение, самостоятельность</span></div>
+        <div class="mini"><b>Гальперин</b><span data-lang="kk">Ақыл-ой әрекетін кезеңдеп қалыптастыру</span><span data-lang="ru">Поэтапное формирование умственных действий</span></div>
+        <div class="mini"><b>Блум</b><span data-lang="kk">Оқу мақсаттарының таксономиясы</span><span data-lang="ru">Таксономия учебных целей</span></div>
+      </div>
+    </section>
+
+    <footer class="toolbar" style="text-align:center;">
+      <strong>© Назерке. Барлық құқық қорғалған.</strong>
+      <p style="margin:8px 0 0; color:var(--muted);">
+        <span data-lang="kk">Материалды рұқсатсыз көшіруге, сатуға, қайта таратуға немесе коммерциялық мақсатта қолдануға болмайды.</span>
+        <span data-lang="ru">Материал нельзя копировать, продавать, распространять или использовать в коммерческих целях без разрешения.</span>
+      </p>
+    </footer>
+
+  </main>
+
+  <script>
+    const body = document.body;
+    const langButtons = document.querySelectorAll(".lang-btn");
+    const searchInput = document.getElementById("searchInput");
+    const clearSearch = document.getElementById("clearSearch");
+    const cards = Array.from(document.querySelectorAll(".scientist-card"));
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const visibleCount = document.getElementById("visibleCount");
+    const emptyState = document.getElementById("emptyState");
+
+    let currentFilter = "all";
+
+    function setLanguage(lang) {
+      if (lang === "ru") {
+        body.classList.add("ru");
+        searchInput.placeholder = "Найдите учёного, понятие или теорию: Выготский, Пиаже, Коменский...";
+      } else {
+        body.classList.remove("ru");
+        searchInput.placeholder = "Ғалымды, ұғымды немесе теорияны іздеңіз: Выготский, Пиаже, Коменский...";
+      }
+
+      langButtons.forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.setLang === lang);
+      });
+    }
+
+    langButtons.forEach(btn => {
+      btn.addEventListener("click", () => setLanguage(btn.dataset.setLang));
+    });
+
+    function normalizeText(text) {
+      return (text || "")
+        .toLowerCase()
+        .replaceAll("ё", "е")
+        .replaceAll("ә", "а")
+        .replaceAll("і", "и")
+        .replaceAll("ң", "н")
+        .replaceAll("ғ", "г")
+        .replaceAll("ү", "у")
+        .replaceAll("ұ", "у")
+        .replaceAll("қ", "к")
+        .replaceAll("ө", "о")
+        .replaceAll("һ", "х");
+    }
+
+    function applySearchAndFilter() {
+      const query = normalizeText(searchInput.value.trim());
+      let count = 0;
+
+      cards.forEach(card => {
+        const categories = card.dataset.category || "";
+        const keywords = normalizeText(card.dataset.keywords || "");
+        const text = normalizeText(card.innerText || "");
+        const matchesFilter = currentFilter === "all" || categories.includes(currentFilter);
+        const matchesSearch = !query || keywords.includes(query) || text.includes(query);
+
+        if (matchesFilter && matchesSearch) {
+          card.classList.remove("hidden");
+          count++;
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+
+      visibleCount.textContent = count;
+      emptyState.style.display = count === 0 ? "block" : "none";
+    }
+
+    searchInput.addEventListener("input", applySearchAndFilter);
+
+    clearSearch.addEventListener("click", () => {
+      searchInput.value = "";
+      currentFilter = "all";
+      filterButtons.forEach(btn => btn.classList.toggle("active", btn.dataset.filter === "all"));
+      applySearchAndFilter();
+    });
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        currentFilter = btn.dataset.filter;
+        filterButtons.forEach(item => item.classList.remove("active"));
+        btn.classList.add("active");
+        applySearchAndFilter();
+      });
+    });
+
+    function checkCardAnswer(button) {
+      const testBox = button.closest(".test-box");
+      const correct = testBox.dataset.answer;
+      const selected = testBox.querySelector("input[type='radio']:checked");
+      const result = testBox.querySelector(".result");
+      const isRu = body.classList.contains("ru");
+
+      if (!selected) {
+        result.className = "result bad";
+        result.textContent = isRu
+          ? "Сначала выберите один вариант ответа."
+          : "Алдымен бір жауап нұсқасын таңдаңыз.";
+        return;
+      }
+
+      if (selected.value === correct) {
+        result.className = "result good";
+        result.textContent = isRu
+          ? "Дұрыс! / Правильно. Этот ответ соответствует основной идее учёного."
+          : "Дұрыс! Бұл жауап ғалымның негізгі идеясымен сәйкес келеді.";
+      } else {
+        const correctLabel = testBox.querySelector(`input[value="${correct}"]`).closest("label").innerText.trim();
+        result.className = "result bad";
+        result.textContent = isRu
+          ? "Неправильно. Правильный ответ: " + correctLabel
+          : "Қате. Дұрыс жауап: " + correctLabel;
+      }
+    }
+
+    window.checkCardAnswer = checkCardAnswer;
+
+    applySearchAndFilter();
+  </script>
+</body>
+</html>
